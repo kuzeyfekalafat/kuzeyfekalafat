@@ -75,13 +75,29 @@
             box-shadow: 0 15px 45px rgba(212, 175, 55, 0.15);
         }
 
-        /* Tab Active Indicator */
-        .tab-btn.active {
+        /* Hero Nav Buttons */
+        .hero-nav-btn {
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-nav-btn.active {
+            background-color: rgba(212, 175, 55, 0.15);
+            border-color: #d4af37;
             color: #d4af37;
-            border-bottom: 2px solid #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
         }
 
-        /* Custom Scrollbar */
+        /* Custom Scrollbar for horizontal nav */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Vertical Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -114,7 +130,7 @@
 <body class="selection:bg-gold-500 selection:text-black">
 
     <!-- TOP BAR: LANGUAGES & DIRECT SOCIAL LINKS (EBRU GÜNDEŞ STYLE) -->
-    <div class="bg-dark-950 border-b border-white/5 text-xs py-2 px-4 sm:px-8">
+    <div class="bg-dark-950 border-b border-white/5 text-xs py-2.5 px-4 sm:px-8">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             
             <!-- Language Flags -->
@@ -143,48 +159,50 @@
         </div>
     </div>
 
-    <!-- NAVIGATION HEADER -->
-    <header class="sticky top-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-gold-500/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            
-            <!-- BRAND LOGO -->
-            <a href="javascript:void(0)" onclick="switchTab('anasayfa')" class="flex flex-col group">
-                <span class="font-cinzel font-black tracking-widest text-xl sm:text-2xl gold-gradient-text group-hover:opacity-90 transition">
-                    KUZEYFE KALAFAT
-                </span>
-                <span class="text-[9px] uppercase tracking-[0.35em] text-gray-400 font-medium -mt-1">
-                    Resmî Sanatçı Portalı
-                </span>
-            </a>
-
-            <!-- DESKTOP NAVIGATION TABS -->
-            <nav class="hidden lg:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase h-full">
-                <button onclick="switchTab('anasayfa')" id="nav-anasayfa" class="tab-btn active py-7 transition text-gray-300 hover:text-gold-400">ANASAYFA</button>
-                <button onclick="switchTab('hakkimda')" id="nav-hakkimda" class="tab-btn py-7 transition text-gray-300 hover:text-gold-400">HAKKIMDA</button>
-                <button onclick="switchTab('albumler')" id="nav-albumler" class="tab-btn py-7 transition text-gray-300 hover:text-gold-400">ALBÜMLER</button>
-                <button onclick="switchTab('galeri')" id="nav-galeri" class="tab-btn py-7 transition text-gray-300 hover:text-gold-400">GALERİ</button>
-                <button onclick="switchTab('iletisim')" id="nav-iletisim" class="tab-btn py-7 transition text-gray-300 hover:text-gold-400">İLETİŞİM</button>
-                <button onclick="switchTab('sosyalmedya')" id="nav-sosyalmedya" class="tab-btn py-7 transition text-gold-500 hover:text-gold-400 flex items-center gap-1.5">
-                    <i class="fa-solid fa-share-nodes"></i> SOSYAL MEDYA
-                </button>
-            </nav>
-
-            <!-- MOBILE MENU BUTTON -->
-            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-gold-500 focus:outline-none p-2">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- MOBILE MENU OVERLAY -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-dark-950 border-b border-gold-500/20 px-6 py-5 space-y-4 text-center">
-            <button onclick="switchTab('anasayfa')" class="mobile-tab-btn block w-full text-sm font-semibold uppercase tracking-wider text-gold-500">ANASAYFA</button>
-            <button onclick="switchTab('hakkimda')" class="mobile-tab-btn block w-full text-sm font-semibold uppercase tracking-wider text-gray-300">HAKKIMDA</button>
-            <button onclick="switchTab('albumler')" class="mobile-tab-btn block w-full text-sm font-semibold uppercase tracking-wider text-gray-300">ALBÜMLER</button>
-            <button onclick="switchTab('galeri')" class="mobile-tab-btn block w-full text-sm font-semibold uppercase tracking-wider text-gray-300">GALERİ</button>
-            <button onclick="switchTab('iletisim')" class="mobile-tab-btn block w-full text-sm font-semibold uppercase tracking-wider text-gray-300">İLETİŞİM</button>
-            <button onclick="switchTab('sosyalmedya')" class="mobile-tab-btn block w-full text-sm font-semibold uppercase tracking-wider text-gold-400">SOSYAL MEDYA</button>
-        </div>
+    <!-- MAIN BRAND HEADER BAR (CLEAN & CENTERED LOGO) -->
+    <header class="bg-dark-950 py-6 border-b border-white/5 text-center">
+        <a href="javascript:void(0)" onclick="switchTab('anasayfa')" class="inline-flex flex-col items-center group">
+            <span class="font-cinzel font-black tracking-[0.2em] text-2xl sm:text-3xl lg:text-4xl gold-gradient-text group-hover:opacity-90 transition">
+                KUZEYFE KALAFAT
+            </span>
+            <span class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-medium mt-1">
+                RESMÎ SANATÇI PORTALI
+            </span>
+        </a>
     </header>
+
+    <!-- INLINE HERO NAV BAR (SEKMELER YAN YANA ALINDI) -->
+    <div class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-gold-500/20 py-3">
+        <div class="max-w-7xl mx-auto px-4">
+            <nav class="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar space-x-2 sm:space-x-3 text-xs font-bold tracking-widest uppercase">
+                
+                <button onclick="switchTab('anasayfa')" id="nav-anasayfa" class="hero-nav-btn active px-4 sm:px-5 py-2.5 rounded-full border border-gold-500/20 text-gray-300 hover:text-gold-400 hover:border-gold-500/50">
+                    ANASAYFA
+                </button>
+                
+                <button onclick="switchTab('hakkimda')" id="nav-hakkimda" class="hero-nav-btn px-4 sm:px-5 py-2.5 rounded-full border border-gold-500/20 text-gray-300 hover:text-gold-400 hover:border-gold-500/50">
+                    HAKKIMDA
+                </button>
+                
+                <button onclick="switchTab('albumler')" id="nav-albumler" class="hero-nav-btn px-4 sm:px-5 py-2.5 rounded-full border border-gold-500/20 text-gray-300 hover:text-gold-400 hover:border-gold-500/50">
+                    ALBÜMLER
+                </button>
+                
+                <button onclick="switchTab('galeri')" id="nav-galeri" class="hero-nav-btn px-4 sm:px-5 py-2.5 rounded-full border border-gold-500/20 text-gray-300 hover:text-gold-400 hover:border-gold-500/50">
+                    GALERİ
+                </button>
+                
+                <button onclick="switchTab('iletisim')" id="nav-iletisim" class="hero-nav-btn px-4 sm:px-5 py-2.5 rounded-full border border-gold-500/20 text-gray-300 hover:text-gold-400 hover:border-gold-500/50">
+                    İLETİŞİM
+                </button>
+                
+                <button onclick="switchTab('sosyalmedya')" id="nav-sosyalmedya" class="hero-nav-btn px-4 sm:px-5 py-2.5 rounded-full border border-gold-500/40 text-gold-400 hover:text-gold-300 hover:border-gold-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-share-nodes text-[11px]"></i> SOSYAL MEDYA
+                </button>
+
+            </nav>
+        </div>
+    </div>
 
     <!-- MAIN CONTENT AREA -->
     <main class="min-h-[75vh]">
@@ -192,28 +210,28 @@
         <!-- ==================== 1. ANASAYFA TAB ==================== -->
         <section id="tab-anasayfa" class="tab-content active-tab">
             <!-- Hero Showcase Banner -->
-            <div class="relative py-20 lg:py-32 overflow-hidden flex items-center justify-center border-b border-white/5">
+            <div class="relative py-16 sm:py-24 lg:py-28 overflow-hidden flex items-center justify-center border-b border-white/5">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-dark-800/60 via-dark-950 to-dark-950"></div>
                 
                 <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-widest mb-6">
-                        <span class="w-2 h-2 rounded-full bg-gold-500"></span> Zaman Perdesi Yapım
+                        <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span> ZAMAN PERDESİ YAPIM
                     </div>
                     
-                    <h1 class="font-cinzel text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-white mb-4">
+                    <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mb-4">
                         KUZEYFE <span class="gold-gradient-text">KALAFAT</span>
                     </h1>
                     
-                    <p class="text-gray-400 text-sm sm:text-lg max-w-2xl mx-auto uppercase tracking-widest font-light mb-10">
-                        Müzisyen • Yapımcı • Söz Yazarı & Besteci
+                    <p class="text-gray-400 text-xs sm:text-base max-w-2xl mx-auto uppercase tracking-[0.25em] font-light mb-10">
+                        MÜZİSYEN • YAPIMCI • SÖZ YAZARI & BESTECİ
                     </p>
 
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <button onclick="switchTab('albumler')" class="px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-dark-950 font-bold uppercase tracking-wider text-xs hover:from-gold-400 hover:to-gold-500 transition shadow-xl shadow-gold-500/20 flex items-center gap-2">
-                            <i class="fa-solid fa-compact-disc text-sm"></i> Albümleri İncele
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+                        <button onclick="switchTab('albumler')" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-dark-950 font-bold uppercase tracking-wider text-xs hover:from-gold-400 hover:to-gold-500 transition shadow-xl shadow-gold-500/20 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-compact-disc text-sm"></i> ALBÜMLERİ İNCELE
                         </button>
-                        <button onclick="switchTab('sosyalmedya')" class="px-8 py-4 rounded-xl bg-dark-800 border border-gold-500/30 text-gold-400 font-bold uppercase tracking-wider text-xs hover:bg-dark-700 hover:border-gold-500 transition flex items-center gap-2">
-                            <i class="fa-solid fa-hashtag text-sm"></i> Sosyal Medya Hesapları
+                        <button onclick="switchTab('sosyalmedya')" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-dark-800 border border-gold-500/30 text-gold-400 font-bold uppercase tracking-wider text-xs hover:bg-dark-700 hover:border-gold-500 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-hashtag text-sm"></i> SOSYAL MEDYA HESAPLARI
                         </button>
                     </div>
                 </div>
@@ -229,7 +247,7 @@
                         </div>
                         <h3 class="font-cinzel text-xl font-bold text-white mb-2">Yeni Albüm: Zirve Yolu</h3>
                         <p class="text-xs text-gray-400 leading-relaxed">
-                            2026 Resmî sürüm albüm şarkı listesi ve akustik performanslar dinleyicilerle buluşuyor.
+                            Resmî sürüm albüm şarkı listesi ve akustik performanslar dinleyicilerle buluşuyor.
                         </p>
                     </div>
 
@@ -789,7 +807,7 @@
             });
 
             // Remove active style from all nav buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
+            document.querySelectorAll('.hero-nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
 
@@ -805,20 +823,9 @@
                 selectedNav.classList.add('active');
             }
 
-            // Hide mobile menu if open
-            document.getElementById('mobile-menu').classList.add('hidden');
-
             // Scroll to top smooth
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        // Mobile Menu Button Logic
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
 
         // Audio Track Click Trigger
         function playAudioTrack(trackName) {
