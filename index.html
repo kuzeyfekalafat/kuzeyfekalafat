@@ -6,7 +6,7 @@
     <title>Kuzeyfe Kalafat - Resmî Web Sitesi</title>
     <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
@@ -71,16 +71,29 @@
         .top-socials {
             display: flex;
             gap: 12px;
+            align-items: center;
         }
 
         .top-socials a {
             color: var(--text-muted);
             transition: var(--transition);
             font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
 
         .top-socials a:hover {
             color: var(--gold-primary);
+        }
+
+        /* Custom SVG or Font Icon Fallback for X */
+        .x-icon-text {
+            font-weight: 800;
+            font-family: sans-serif;
+            font-size: 14px;
+            line-height: 1;
         }
 
         /* Header / Logo Section */
@@ -241,7 +254,7 @@
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* HAKKIMDA (PROFILE PHOTO & EDITABLE BIO) */
+        /* HAKKIMDA */
         .about-card {
             background: var(--bg-card);
             border: 1px solid var(--border-gold);
@@ -562,7 +575,7 @@
             padding: 15px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             text-decoration: none;
             color: var(--text-main);
             transition: var(--transition);
@@ -574,9 +587,11 @@
             background: rgba(212, 175, 55, 0.05);
         }
 
-        .social-card-item i {
+        .social-card-item i, .social-card-item .card-x-icon {
             font-size: 22px;
             color: var(--gold-primary);
+            width: 24px;
+            text-align: center;
         }
 
         .social-card-item div h4 {
@@ -604,12 +619,14 @@
             justify-content: center;
             gap: 14px;
             margin-bottom: 10px;
+            align-items: center;
         }
 
         .footer-socials a {
             color: var(--text-muted);
             font-size: 15px;
             transition: var(--transition);
+            text-decoration: none;
         }
 
         .footer-socials a:hover {
@@ -641,7 +658,7 @@
         </div>
         <div class="top-socials">
             <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://x.com" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -690,7 +707,6 @@
                 <p>Fotoğrafınızı Yükleyin ve Biyografinizi Düzenleyin</p>
             </div>
             <div class="about-card">
-                <!-- Profile Image Upload & Preview -->
                 <div class="profile-upload-container">
                     <div class="profile-preview-box" id="profile-preview-box">
                         <i class="fas fa-user" id="profile-placeholder" style="font-size: 50px; color: var(--gold-primary);"></i>
@@ -702,7 +718,6 @@
                     <input type="file" id="profile-photo-input" accept="image/*" onchange="handleProfilePhotoUpload(event)">
                 </div>
 
-                <!-- Biography Textarea -->
                 <textarea id="bio-input" class="bio-textarea" placeholder="Biyografinizi ve hakkınızdaki bilgileri buraya yazınız..."></textarea>
                 
                 <button class="btn-gold" style="width: 100%; border-radius: 8px; padding: 12px;" onclick="saveBiography()">
@@ -719,7 +734,6 @@
             </div>
 
             <div class="music-upload-card">
-                <!-- Type Selector -->
                 <div class="type-selector">
                     <button class="type-btn active" id="type-single-btn" onclick="toggleReleaseType('single')">
                         <i class="fas fa-music"></i> Tekli (Single)
@@ -729,7 +743,6 @@
                     </button>
                 </div>
 
-                <!-- Cover Image Upload -->
                 <div class="form-block">
                     <div class="form-block-title"><i class="fas fa-image"></i> Kapak Görseli Dosyası Seç</div>
                     <div class="custom-file-row">
@@ -739,7 +752,6 @@
                     </div>
                 </div>
 
-                <!-- Metadata Fields -->
                 <div class="form-block">
                     <div class="form-block-title"><i class="fas fa-edit"></i> Eser Künye Bilgileri (Manuel)</div>
                     <div class="form-grid-2">
@@ -754,7 +766,6 @@
                     </div>
                 </div>
 
-                <!-- Single Mode Form -->
                 <div id="single-release-fields">
                     <div class="form-group">
                         <label>Şarkı Adı</label>
@@ -776,7 +787,6 @@
                     </div>
                 </div>
 
-                <!-- Album Mode Form (15 Tracks Grid) -->
                 <div id="album-release-fields" style="display: none;">
                     <div class="form-group">
                         <label>Albüm Adı</label>
@@ -787,9 +797,7 @@
                         <i class="fas fa-list-ol"></i> Albüm Parçaları (15 Şarkı)
                     </div>
 
-                    <div id="tracks-container">
-                        <!-- 15 track cards rendered dynamically via JavaScript -->
-                    </div>
+                    <div id="tracks-container"></div>
                 </div>
 
                 <button class="btn-gold" style="width: 100%; border-radius: 8px; margin-top: 15px; padding: 12px;" onclick="alert('Eseriniz başarıyla sisteme eklendi!');">
@@ -798,7 +806,7 @@
             </div>
         </section>
 
-        <!-- GALERİ TAB (MANUAL FILE UPLOAD) -->
+        <!-- GALERİ TAB -->
         <section id="galeri" class="tab-content">
             <div class="section-header">
                 <h2>FOTOĞRAF GALERİSİ</h2>
@@ -812,9 +820,7 @@
                 </label>
                 <input type="file" id="gallery-file-input" accept="image/*" multiple onchange="handleGalleryUpload(event)">
             </div>
-            <div id="gallery-grid" class="content-grid">
-                <!-- Yüklenen görseller buraya eklenecektir -->
-            </div>
+            <div id="gallery-grid" class="content-grid"></div>
         </section>
 
         <!-- İLETİŞİM TAB -->
@@ -904,7 +910,7 @@
             </div>
         </section>
 
-        <!-- SOSYAL MEDYA TAB -->
+        <!-- SOSYAL MEDYA TAB (EXACT 6 PLATFORMS) -->
         <section id="sosyal-medya" class="tab-content">
             <div class="section-header">
                 <h2>RESMÎ HESAPLAR</h2>
@@ -926,7 +932,7 @@
                     </div>
                 </a>
                 <a href="https://x.com" target="_blank" class="social-card-item">
-                    <i class="fab fa-x-twitter"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
                     <div>
                         <h4>X (Twitter)</h4>
                         <p>@kuzeyfekalafat</p>
@@ -961,7 +967,7 @@
     <footer>
         <div class="footer-socials">
             <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://x.com" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -1020,7 +1026,6 @@
             }
         }
 
-        // Handle Profile Photo Upload & Preview
         function handleProfilePhotoUpload(event) {
             const file = event.target.files[0];
             if (file) {
@@ -1037,7 +1042,6 @@
             }
         }
 
-        // Save & Load Biography
         function saveBiography() {
             const text = document.getElementById('bio-input').value;
             localStorage.setItem('kuzeyfe_bio', text);
@@ -1062,7 +1066,6 @@
             }
         }
 
-        // Render 15 Album Tracks dynamically with Song Title, Audio File & Lyrics
         function render15Tracks() {
             const container = document.getElementById('tracks-container');
             container.innerHTML = '';
@@ -1088,7 +1091,6 @@
             }
         }
 
-        // Handle Gallery Uploads
         function handleGalleryUpload(event) {
             const files = event.target.files;
             const grid = document.getElementById('gallery-grid');
@@ -1105,7 +1107,6 @@
             }
         }
 
-        // Initialize on window load
         window.onload = function() {
             loadBiography();
             render15Tracks();
