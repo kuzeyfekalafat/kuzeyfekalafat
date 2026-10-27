@@ -109,37 +109,13 @@
             text-transform: uppercase;
         }
 
-        /* Inline Navigation Beneath Badge */
+        /* Inline Navigation */
         .badge-nav-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            margin: 20px 0 10px;
+            margin: 15px 0 10px;
             padding: 0 15px;
-        }
-
-        .badge-title {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--border-gold);
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: var(--gold-primary);
-            text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .badge-title::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background-color: var(--gold-primary);
-            border-radius: 50%;
-            box-shadow: 0 0 8px var(--gold-primary);
         }
 
         .inline-nav {
@@ -265,7 +241,7 @@
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* HAKKIMDA (PROFIL PHOTO & EDITABLE BIO) */
+        /* HAKKIMDA (PROFILE PHOTO & EDITABLE BIO) */
         .about-card {
             background: var(--bg-card);
             border: 1px solid var(--border-gold);
@@ -626,13 +602,13 @@
         .footer-socials {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
             margin-bottom: 10px;
         }
 
         .footer-socials a {
             color: var(--text-muted);
-            font-size: 14px;
+            font-size: 15px;
             transition: var(--transition);
         }
 
@@ -664,12 +640,12 @@
             <span class="flag-icon">🇩🇪</span>
         </div>
         <div class="top-socials">
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
         </div>
     </div>
 
@@ -681,9 +657,8 @@
         </div>
     </header>
 
-    <!-- Badge & Inline Navigation -->
+    <!-- Inline Navigation -->
     <div class="badge-nav-container">
-        <div class="badge-title">ZAMAN PERDESİ YAPIM</div>
         <nav class="inline-nav">
             <button class="nav-btn active" onclick="switchTab('anasayfa')">ANASAYFA</button>
             <button class="nav-btn" onclick="switchTab('hakkimda')">HAKKIMDA</button>
@@ -950,7 +925,7 @@
                         <p>Kuzeyfe Kalafat Official</p>
                     </div>
                 </a>
-                <a href="https://twitter.com" target="_blank" class="social-card-item">
+                <a href="https://x.com" target="_blank" class="social-card-item">
                     <i class="fab fa-x-twitter"></i>
                     <div>
                         <h4>X (Twitter)</h4>
@@ -985,12 +960,12 @@
     <!-- Footer -->
     <footer>
         <div class="footer-socials">
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
         </div>
         <p>&copy; 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.</p>
         <p style="color: rgba(255,255,255,0.3); margin-top: 4px;">Zaman Perdesi Yapım Prodüksiyon</p>
