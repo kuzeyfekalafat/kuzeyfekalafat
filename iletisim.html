@@ -9,7 +9,27 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; }
         
-        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+        .top-content { max-width: 450px; margin: 0 auto; width: 100%; }
+
+        /* Üst Header - Bayraklı ve Orijinal Renkli İkonlu Başlık */
+        .portal-header { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .portal-flag { font-size: 14px; }
+        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+        
+        .top-social-icons { display: flex; align-items: center; gap: 8px; }
+        .top-social-icons a { font-size: 13px; text-decoration: none; display: flex; align-items: center; }
+        
+        /* Orijinal İkon Renkleri */
+        .color-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .color-yt { color: #ff0000; }
+        .color-fb { color: #1877f2; }
+        .color-tk { color: #fe2c55; }
+        .color-sp { color: #1db954; }
+        
+        /* X (Twitter) Özel SVG */
+        .x-svg-icon { width: 13px; height: 13px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+        .footer-x-svg { width: 16px; height: 16px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+
         nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
         nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
         nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
@@ -35,23 +55,41 @@
         textarea.form-control { resize: vertical; min-height: 90px; }
         .btn-submit { width: 100%; background: linear-gradient(180deg, #d4af37 0%, #aa820a 100%); color: #000; border: none; border-radius: 8px; padding: 14px; font-weight: bold; font-size: 13px; letter-spacing: 1px; cursor: pointer; text-transform: uppercase; margin-top: 10px; }
 
-        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; }
-        .footer-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
-        .footer-icons a { color: #888; font-size: 16px; text-decoration: none; }
+        /* Footer */
+        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; text-align: center; }
+        .footer-icons { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .footer-icons a { font-size: 18px; text-decoration: none; display: flex; align-items: center; transition: 0.3s; }
+        .footer-icons a:hover { transform: scale(1.2); }
         .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-    <div class="portal-title">RESMÎ SANATÇI PORTALI</div>
+    <div class="top-content">
+        <!-- Üst Header: Sol Bayrak, Sağ Renkli İkonlar -->
+        <div class="portal-header">
+            <span class="portal-flag" title="Türkiye">🇹🇷</span>
+            <span class="portal-title">RESMÎ SANATÇI PORTALI</span>
+            <div class="top-social-icons">
+                <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                    <svg class="x-svg-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+                <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
 
-    <nav>
-        <a href="index.html">Anasayfa</a>
-        <a href="hakkinda.html">Hakkımda</a>
-        <a href="albumler1.html">Albümler</a>
-        <a href="iletisim.html" class="active">İletişim</a>
-        <a href="sosyal-medya.html">Sosyal Medya</a>
-    </nav>
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html">Albümler</a>
+            <a href="iletisim.html" class="active">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+    </div>
 
     <h1>İLETİŞİM</h1>
     <div class="subtitle">Bize Ulaşın</div>
@@ -136,14 +174,17 @@
         </form>
     </div>
 
+    <!-- Alt Kısım - Orijinal Renkli İkonlar -->
     <footer>
         <div class="footer-icons">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-x-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-tiktok"></i>
-            <i class="fab fa-spotify"></i>
+            <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                <svg class="footer-x-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+            <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
         </div>
         <div class="footer-text">
             © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
