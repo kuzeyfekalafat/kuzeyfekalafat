@@ -23,16 +23,20 @@
         
         .social-card { display: flex; align-items: center; background: #141414; border: 1px solid #222; border-radius: 12px; padding: 15px; text-decoration: none; color: #fff; transition: 0.3s; }
         .social-card:hover { border-color: #d4af37; transform: translateY(-2px); }
-        .social-icon { font-size: 28px; width: 45px; color: #d4af37; text-align: center; margin-right: 15px; }
+        .social-icon { font-size: 28px; width: 45px; color: #d4af37; text-align: center; margin-right: 15px; display: flex; align-items: center; justify-content: center; }
+        .social-icon svg { width: 24px; height: 24px; fill: #d4af37; }
+        
         .social-info { text-align: left; }
         .social-name { font-size: 16px; font-weight: bold; }
         .social-handle { font-size: 12px; color: #777; }
 
         /* Footer */
         footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; }
-        .footer-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
-        .footer-icons a { color: #888; font-size: 16px; text-decoration: none; transition: 0.3s; }
+        .footer-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; align-items: center; }
+        .footer-icons a { color: #888; font-size: 16px; text-decoration: none; transition: 0.3s; display: flex; align-items: center; }
         .footer-icons a:hover { color: #d4af37; }
+        .footer-icons svg { width: 16px; height: 16px; fill: #888; transition: 0.3s; }
+        .footer-icons a:hover svg { fill: #d4af37; }
         .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
     </style>
 </head>
@@ -69,7 +73,10 @@
         </a>
 
         <a href="https://x.com/kuzeyfekalafat" target="_blank" class="social-card">
-            <i class="fa-brands fa-x-twitter social-icon"></i>
+            <div class="social-icon">
+                <!-- X (Twitter) Özel SVG logosu -->
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </div>
             <div class="social-info">
                 <div class="social-name">X (Twitter)</div>
                 <div class="social-handle">@kuzeyfekalafat</div>
@@ -104,7 +111,9 @@
     <footer>
         <div class="footer-icons">
             <a href="https://instagram.com/kuzeyfekalafat" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/kuzeyfekalafat" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
             <a href="https://youtube.com/@kuzeyfekalafat" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://facebook.com/kuzeyfekalafat" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank"><i class="fab fa-tiktok"></i></a>
