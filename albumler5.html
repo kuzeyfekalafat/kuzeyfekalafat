@@ -9,6 +9,23 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
         .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        
+        /* Üst ve Alt Sanatçı Portalı / Sosyal Medya Bandı */
+        .portal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; font-size: 11px; font-weight: 700; color: #fff; padding: 0 2px; width: 100%; }
+        .portal-left { display: flex; align-items: center; gap: 5px; letter-spacing: 0.5px; white-space: nowrap; }
+        
+        .social-icons { display: flex; align-items: center; gap: 8px; }
+        .social-icons a { font-size: 14px; transition: 0.3s; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+        .social-icons a:hover { transform: scale(1.15); }
+
+        /* Orijinal Sosyal Medya Marka Renkleri */
+        .social-icons .fa-instagram { color: #e1306c; }
+        .social-icons .x-icon { fill: #ffffff; width: 13px; height: 13px; }
+        .social-icons .fa-youtube { color: #ff0000; }
+        .social-icons .fa-facebook-f { color: #1877f2; }
+        .social-icons .fa-tiktok { color: #00f2fe; }
+        .social-icons .fa-spotify { color: #1db954; }
+
         nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
         nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
         nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
@@ -34,17 +51,35 @@
         .accordion-item.active .accordion-header i { transform: rotate(180deg); }
         .accordion-item.active { border-color: #d4af37; }
 
-        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .footer-social { display: flex; justify-content: center; }
         .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
     <div class="top-content">
+        <!-- Üst Portal ve Orijinal Renkli Sosyal Medya Alanı -->
+        <div class="portal-header">
+            <div class="portal-left">
+                <span>🇹🇷</span> RESMÎ SANATÇI PORTALI
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank">
+                    <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+
         <nav>
             <a href="index.html">Anasayfa</a>
             <a href="hakkinda.html">Hakkımda</a>
-            <a href="albumler1.html" class="active">Albümler</a>
+            <a href="albumler.html" class="active">Albümler</a>
             <a href="iletisim.html">İletişim</a>
             <a href="sosyal-medya.html">Sosyal Medya</a>
         </nav>
@@ -96,7 +131,6 @@ Ne ayrılık korkusu, ne de kederli bir diz
 Biz bu sevda yolunda, en güzel ikimiz!
 Hadi yak ateşi, ritmi hisset derinden
 Bu gece kimse tutamaz bizi yerinden!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -140,7 +174,6 @@ Seninle bu yollar çıkmaz sokak mı oldu?
 Aşkın kuralları bozulur bu akşam!
 Hadi gel, korkma hiç, bas gaza derinden
 Sallansın bu dünya, yıkılsın yerinden!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -180,7 +213,6 @@ Aldın beni göz hapsine, bırakmıyorsun peşimi
 Bu nasıl bir büyü, sardı bütün neşemi!
 İtiraf et artık, sende de var o kıvılcım
 Seninle bu hayat, işte şimdi tamam marjım!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -222,7 +254,6 @@ Kapıldım o rüzgara, esiyor en derinde
 Ne kural tanır bu sevda, ne de eski korkuyu
 Seninle buldum ben o en güzel duyguyu!
 Hadi yak ateşi, sabaha kadar sürsün bu disko!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -264,7 +295,6 @@ Bu ne harika duygu, bu nasıl bir zevkalev?
 Söndüremez kimse artık içimdeki bu koru
 Seninle başlamış bu hayatın en güzel yolu!
 Hadi coşsun bu gece, ses verelim sesimize!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -306,7 +336,6 @@ Bırak aksın neşe dolu bu nefes içimize
 Ne dert kalır ne tazar, ne de eski bir keder
 Bu gece bu dans bize her şeye bedel!
 Hadi salla dünyayı, durmasın bu ayaklar!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -348,7 +377,6 @@ Var bu işte gizli bir çekim kuvveti!
 Ne dikey kalır ne yatay, dengemiz altüst oldu
 Seninle bu macera en güzel yere kondu!
 Hadi sarıl sıkıca, düşmeyelim boşluğa!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -373,7 +401,7 @@ Hadi bas gaza, geçelim o çizgiyi!
 Burası yasak bölge, giren geri çıkamaz!
 Bu ateşli sevdaya kimse engel olamaz
 Duvarları yıkıp geçtim, mühürleri söktüm ben
-Seninle এই tehlike bana en güzel gelen!
+Seninle bu tehlike bana en güzel gelen!
 Hadi yak ateşi, korkmuyoruz kuraldan!
 
 Risk almadan kazanılmaz en büyük ödüller
@@ -390,7 +418,6 @@ Bu ateşli sevdaya kimse engel olamaz
 Duvarları yıkıp geçtim, mühürleri söktüm ben
 Seninle bu tehlike bana en güzel gelen!
 Hadi yak ateşi, korkmuyoruz kuraldan!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -432,7 +459,6 @@ Bu nasıl bir uyum, kaçış yok bu heyecandan
 Ne bozulur bu ayar, ne de sinyalimiz düşer
 Seninle bu melodi her anımıza değer!
 Hadi salla dünyayı, ritmi hiç durdurma!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -474,7 +500,6 @@ Kapıldım bu akıntıya, koydum başımı yola
 Ne durmaya yer var şimdi, ne de geri dönmeye
 Seninle bu macera değer her bir saniyeye!
 Hadi yak ateşi, son sürat devam edelim!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -516,7 +541,6 @@ Kim takar uyarırı, kim bakar dağına
 Ne pişmanlık var şimdi, ne de geri dönüş yol
 Seninle bu macera ne kadar güzel bol!
 Hadi salla dünyayı, durmasın bu ayaklar!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -558,7 +582,6 @@ Sallansın bütün salon, coşsun için için
 Ne durmaya yer var bizim şimdi, ne de arkaya bakmaya
 Seninle bu gecede doymayacağız oynamaya!
 Hadi yak ateşi, göster gününü herkese!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -600,7 +623,6 @@ Yükseliyor gökyüzüne coşkulu bir nefes
 Ne dert kalır ne keder, ne de eski bir tasa
 Seninle bu eğlence yakışır en çok bize yasa!
 Hadi salla dünyayı, durmasın bu ayaklar!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -642,7 +664,6 @@ Yankılansın dört bir yana bu tatlı sevdanın sesi
 Ne kural tanır bu coşku, ne de eski bir yasa
 Seninle yazdık bu destanı en başından masaya!
 Hadi salla dünyayı, bu albüm bizim imzamız!
-
                     <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -651,6 +672,17 @@ Hadi salla dünyayı, bu albüm bizim imzamız!
     </div>
 
     <footer>
+        <!-- Alt Sosyal Medya İkonları -->
+        <div class="footer-social social-icons">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank">
+                <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
         <div class="footer-text">
             © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
             Zaman Perdesi Yapım Prodüksiyon
@@ -662,12 +694,10 @@ Hadi salla dünyayı, bu albüm bizim imzamız!
             const item = header.parentElement;
             const isActive = item.classList.contains('active');
             
-            // Hepsini kapat
             document.querySelectorAll('.accordion-item').forEach(i => {
                 i.classList.remove('active');
             });
             
-            // Tıklanan kapalıysa aç
             if (!isActive) {
                 item.classList.add('active');
             }
