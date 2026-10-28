@@ -31,27 +31,20 @@
         .footer-x-svg { width: 16px; height: 16px; fill: #ffffff; display: inline-block; vertical-align: middle; }
 
         /* Navigation */
-        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 35px; }
         nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
         nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
         nav a:hover { border-color: #d4af37; color: #d4af37; }
         
-        /* Katalog Bölümü */
-        .catalog-container { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+        /* Hero Section */
+        .hero-box { background: #141414; border: 1px solid #222; border-radius: 20px; padding: 40px 20px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .hero-logo { font-size: 40px; color: #d4af37; margin-bottom: 15px; }
+        h1 { color: #d4af37; font-size: 28px; letter-spacing: 3px; margin-bottom: 10px; text-transform: uppercase; }
+        .subtitle { color: #aaa; font-size: 14px; margin-bottom: 25px; letter-spacing: 1px; }
+        .welcome-text { color: #888; font-size: 13px; line-height: 1.7; margin-bottom: 30px; }
         
-        .catalog-title { color: #d4af37; font-size: 22px; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; font-weight: bold; }
-        .catalog-subtitle { color: #888; font-size: 12px; margin-bottom: 20px; letter-spacing: 1px; }
-
-        .album-card { background: #141414; border: 1px solid #222; border-radius: 14px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; transition: 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
-        .album-card:hover { border-color: #d4af37; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2); }
-
-        .album-left { display: flex; align-items: center; gap: 15px; text-align: left; }
-        .album-num { color: #d4af37; font-size: 16px; font-weight: bold; }
-        .album-details .name { color: #fff; font-size: 15px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
-        .album-details .info { color: #777; font-size: 11px; margin-top: 3px; }
-
-        .album-arrow { color: #d4af37; font-size: 14px; transition: transform 0.3s; }
-        .album-card:hover .album-arrow { transform: translateX(5px); }
+        .btn-enter { display: inline-block; background: linear-gradient(180deg, #d4af37 0%, #aa820a 100%); color: #000; padding: 12px 30px; border-radius: 25px; font-weight: bold; text-decoration: none; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+        .btn-enter:hover { transform: scale(1.05); }
 
         /* Footer */
         footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
@@ -83,51 +76,19 @@
         <nav>
             <a href="index.html" class="active">Anasayfa</a>
             <a href="hakkinda.html">Hakkımda</a>
-            <a href="index.html">Albümler</a>
+            <a href="albumler.html">Albümler</a>
             <a href="iletisim.html">İletişim</a>
             <a href="sosyal-medya.html">Sosyal Medya</a>
         </nav>
 
-        <div class="catalog-title">DİJİTAL ALBÜM ARŞİVİ</div>
-        <div class="catalog-subtitle">Tüm Albüm Külliyatı & Şarkı Sözleri</div>
-
-        <div class="catalog-container">
-            <!-- Albüm 1 -->
-            <a href="albumler1.html" class="album-card">
-                <div class="album-left">
-                    <span class="album-num">01</span>
-                    <div class="album-details">
-                        <div class="name">ZİRVE YOLU</div>
-                        <div class="info">12 Şarkı • Zaman Perdesi Music</div>
-                    </div>
-                </div>
-                <i class="fas fa-chevron-right album-arrow"></i>
-            </a>
-
-            <!-- Albüm 2 -->
-            <a href="albumler2.html" class="album-card">
-                <div class="album-left">
-                    <span class="album-num">02</span>
-                    <div class="album-details">
-                        <div class="name">SON SÖZ</div>
-                        <div class="info">14 Şarkı • Zaman Perdesi Music</div>
-                    </div>
-                </div>
-                <i class="fas fa-chevron-right album-arrow"></i>
-            </a>
-
-            <!-- İleride eklenecek diğer albümler için şablon:
-            <a href="albumler3.html" class="album-card">
-                <div class="album-left">
-                    <span class="album-num">03</span>
-                    <div class="album-details">
-                        <div class="name">ALBÜM ADI</div>
-                        <div class="info">Şarkı Sayısı • Zaman Perdesi Music</div>
-                    </div>
-                </div>
-                <i class="fas fa-chevron-right album-arrow"></i>
-            </a>
-            -->
+        <div class="hero-box">
+            <div class="hero-logo"><i class="fas fa-crown"></i></div>
+            <h1>KUZEYFE KALAFAT</h1>
+            <div class="subtitle">Resmî Sanatçı Arşivi & Kütüphanesi</div>
+            <p class="welcome-text">
+                Sanatçının tüm albüm külliyatına, şarkı sözlerine, resmî biyografisine ve iletişim kanallarına bu dijital müzeden kalıcı olarak ulaşabilirsiniz.
+            </p>
+            <a href="albumler.html" class="btn-enter">Arşivi Keşfet</a>
         </div>
     </div>
 
@@ -141,7 +102,7 @@
             <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
             <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
             <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
-            <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
+            <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i>]</a>
         </div>
         <div class="footer-text">
             © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
