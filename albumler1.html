@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZİRVE YOLU | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; }
+        
+        .top-content { max-width: 450px; margin: 0 auto; width: 100%; }
+
+        /* Üst Header */
+        .portal-header { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .portal-flag { font-size: 14px; }
+        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+        
+        .top-social-icons { display: flex; align-items: center; gap: 8px; }
+        .top-social-icons a { font-size: 13px; text-decoration: none; display: flex; align-items: center; }
+        
+        /* Orijinal İkon Renkleri */
+        .color-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .color-yt { color: #ff0000; }
+        .color-fb { color: #1877f2; }
+        .color-tk { color: #fe2c55; }
+        .color-sp { color: #1db954; }
+        
+        /* X (Twitter) Özel SVG */
+        .x-svg-icon { width: 13px; height: 13px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+        .footer-x-svg { width: 16px; height: 16px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        
+        h1 { color: #d4af37; font-size: 26px; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; }
+        .subtitle { color: #888; font-size: 13px; margin-bottom: 25px; }
+        
+        .main-box { max-width: 500px; margin: 0 auto 25px auto; background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        /* Albüm Kapak Alanı */
+        .album-header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 20px; }
+        .album-cover { width: 180px; height: 180px; object-fit: cover; border-radius: 12px; border: 2px solid #d4af37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); margin-bottom: 15px; }
+        .album-title { color: #d4af37; font-size: 20px; font-weight: bold; letter-spacing: 1px; }
+        .album-info { color: #777; font-size: 12px; margin-top: 5px; }
+
+        /* Şarkı Listesi & Accordion Akordeon Yapısı */
+        .tracklist { display: flex; flex-direction: column; gap: 12px; }
+        .track-item { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .track-item:hover { border-color: #d4af37; }
+        
+        .track-header { padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .track-number { color: #d4af37; font-weight: bold; margin-right: 10px; font-size: 14px; }
+        .track-name { color: #fff; font-size: 14px; font-weight: 600; flex-grow: 1; }
+        .track-icon { color: #888; font-size: 12px; transition: transform 0.3s; }
+
+        .track-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: #111; padding: 0 18px; border-top: 1px solid transparent; }
+        .track-content p { color: #bbb; font-size: 13px; line-height: 1.8; padding: 15px 0; white-space: pre-line; }
+
+        .track-item.open .track-icon { transform: rotate(180deg); color: #d4af37; }
+        .track-item.open .track-content { max-height: 1000px; border-top-color: #222; }
+
+        /* Footer */
+        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; text-align: center; }
+        .footer-icons { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .footer-icons a { font-size: 18px; text-decoration: none; display: flex; align-items: center; transition: 0.3s; }
+        .footer-icons a:hover { transform: scale(1.2); }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <!-- Üst Header -->
+        <div class="portal-header">
+            <span class="portal-flag" title="Türkiye">🇹🇷</span>
+            <span class="portal-title">RESMÎ SANATÇI PORTALI</span>
+            <div class="top-social-icons">
+                <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                    <svg class="x-svg-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+                <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html" class="active">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+    </div>
+
+    <h1>ZİRVE YOLU</h1>
+    <div class="subtitle">Albüm 1 • Şarkı Sözleri & Detaylar</div>
+
+    <div class="main-box">
+        <div class="album-header">
+            <!-- Albüm Görseli (İleride kapak fotoğrafı eklediğinde album1.jpg adı ile çekebilirsin) -->
+            <img src="album1.jpg" alt="Zirve Yolu Albüm Kapağı" class="album-cover" onerror="this.src='profil.jpg'">
+            <div class="album-title">ZİRVE YOLU</div>
+            <div class="album-info">Zaman Perdesi Music • 12 Şarkı</div>
+        </div>
+
+        <div class="tracklist">
+
+            <!-- Şarkı 1 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">01</span>
+                    <span class="track-name">Kapıyı Vurdum</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 2 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">02</span>
+                    <span class="track-name">Koca Çınarım (BABAM)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 3 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">03</span>
+                    <span class="track-name">Hata Benim</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 4 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">04</span>
+                    <span class="track-name">Cennet Kokan (ANNEM)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 5 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">05</span>
+                    <span class="track-name">Saat Beş</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 6 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">06</span>
+                    <span class="track-name">Gölge Etme</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 7 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">07</span>
+                    <span class="track-name">Yalnız Gözler</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 8 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">08</span>
+                    <span class="track-name">Zirve Yolu</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 9 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">09</span>
+                    <span class="track-name">Geceyi Yak</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 10 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">10</span>
+                    <span class="track-name">Ateş ve Kumsal</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 11 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">11</span>
+                    <span class="track-name">İz Bırakanlar</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+            <!-- Şarkı 12 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">12</span>
+                    <span class="track-name">Son Sayfa</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>Sözler buraya gelecek...</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Alt Kısım -->
+    <footer>
+        <div class="footer-icons">
+            <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                <svg class="footer-x-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+            <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
+        </div>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+    <script>
+        function toggleTrack(element) {
+            const trackItem = element.parentElement;
+            trackItem.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
