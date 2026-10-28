@@ -1,1 +1,709 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albüm 7 | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
+        .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
+        nav a:hover { border-color: #d4af37; color: #d4af37; }
+        
+        .album-header-box { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px 20px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+        .album-title { color: #d4af37; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; text-transform: uppercase; font-weight: bold; }
+        .album-info { color: #888; font-size: 12px; letter-spacing: 1px; }
 
+        .accordion-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; text-align: left; }
+        .accordion-item { background: #141414; border: 1px solid #222; border-radius: 12px; overflow: hidden; transition: 0.3s; }
+        .accordion-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .accordion-header span { color: #d4af37; font-weight: bold; font-size: 14px; }
+        .accordion-header .song-name { color: #fff; font-size: 14px; font-weight: 600; text-transform: uppercase; flex-grow: 1; margin-left: 15px; }
+        .accordion-header i { color: #d4af37; font-size: 12px; transition: transform 0.3s; }
+        
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 20px; background: #111; color: #ccc; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+        
+        .credits { margin-top: 15px; padding-top: 12px; border-top: 1px dashed #333; color: #d4af37; font-size: 12px; font-weight: 600; }
+
+        /* Açıldığında */
+        .accordion-item.active .accordion-content { max-height: 3000px; padding: 20px; }
+        .accordion-item.active .accordion-header i { transform: rotate(180deg); }
+        .accordion-item.active { border-color: #d4af37; }
+
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html" class="active">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+
+        <div class="album-header-box">
+            <div class="album-title">7. ALBÜM</div>
+            <div class="album-info">Zaman Perdesi Music • 15 Şarkı</div>
+        </div>
+
+        <div class="accordion-container">
+            
+            <!-- Şarkı 1 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>01</span>
+                    <div class="song-name">Zamanın Ötesinde</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Işıklar altında yorulur dünya
+Biz başka bir yerde, uzak bir rüyada
+Sıradan bakışlar, yalanmış meğer
+Bu gece yaşanacak her şeye değer
+Geriye bakmadan, rüzgara karşı
+Burası bizim en gizli yarışımız
+
+Takvimler silinsin, saatler sussun
+Aklındaki o korkular bir an uçsun
+Gözlerimin içine bak, derinleşsin
+Bu enerji damarlarında, ruhunda gezsin
+
+Zamanın ötesinde, her şey bugün durdu
+Kalbim senin o ritminle, yeniden vuruldu
+Bu bir oyun değil, bu başka bir hayat
+Zamanın ötesinde, gel şimdi uzat elini
+Sabah olmasın, bu gece bizim!
+
+Söylediğin her söz bir iz bırakıyor
+Gözlerimdeki o ışık seni yakıyor
+Dünümüz yok bizim, yarınımız meçhul
+Sadece bu an var, her şey çok usul
+Aynadaki silüet yabancı şimdi
+Bizi bu rüya buraya getirdi
+
+Sınırları çizenler, hep kalsın geride
+Bizim dünyamız, tam bu gecenin kalbinde...
+Duyuyor musun... zaman durdu sanki...
+
+Zamanın ötesinde...
+Sadece sen ve ben...
+Sabahı unut, biz buradayız.
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>02</span>
+                    <div class="song-name">Ayna</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Duvarlarda yankılanır adımlar
+Gecenin içinde kaybolur anılar
+Yüzleşmek zor bazen gerçeğin kendisiyle
+Kaçtı herkes kendi gizli derdiyle
+Baktım uzun uzun, tanıyamadım sanki
+Bu bendeki yabancı, bir rüya mı inatçı?
+
+Kırıldı bütün maskeler, döküldü ortalığa
+Saklanacak yer kalmadı bu son oyunda
+Gözlerimin içine bak ve söyle ne gördün
+Asıl sen misin o, yoksa ben mi dündüm?
+
+Ayna anlat her şeyi, saklama yüzümü
+Kim bu karşımda duran, yıktı tüm hüzünü?
+Yalanlar bitti artık, geriye bir ben kaldı
+Ayna söyle, bu adam senden mi çalındı?
+Ayna, ayna... söyle bana!
+
+Geçmişin izleri durur hala yüzde
+Saklanmış o korkular en derin düzde
+Yorulduk rüzgara karşı koşmaktan
+Korktuk hep gerçeği duymaktan, kaçmaktan
+Ama bitti o günler, devran döndü şimdi
+Küllerinden doğan adam tam karşımdaydı
+
+Gözlerimin içine bak...
+Saklanacak yer yok...
+Kimsin sen? Kimim ben?
+
+Aynadaki sensin...
+Sadece gerçeksin...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>03</span>
+                    <div class="song-name">Yalnız Değilsin</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Karanlık odanın tek ışığı sensin
+Etrafıma örülen duvarları delersin
+Yorulduk bazen bu sessiz savaştan
+Kimseye boyun eğmedik bu yaştan
+Ama biliyorum, sen de bendensin
+
+Bazen ağır gelir omuzlara yükler
+İçindeki o çocuk, sessizce inler
+Korkma sakın, bırak karanlık kalsın
+Gözlerindeki o ışık hep yansın
+
+Yalnız değilsin, duy sesimi buradan
+Aynı rüzgar savurdu bizi bu yoldan
+El ele versek, yıkarız bu dünyayı
+Karanlık geceye inat, yakalım ışığı
+Yalnız değilsin, buradayım ben!
+
+Yollar uzun, hava soğuk ve ayaz
+Bizim hikayemiz hiç bitmeyen bir yaz
+Kim ne derse desin, aldırma onlara
+Biz yazdık kendi yönümüzü yarınlara
+Birlikte atıyor şimdi bu kalpler
+
+Bir adım at yeter, ben buradayım
+Korkularını silip at, ben yanındayım...
+
+Yalnız değilsin...
+Ben yanındayım...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>04</span>
+                    <div class="song-name">Kaybolan Yıllar</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Takvim yaprakları düşerken ardıma
+Seslendim kaç kez ama çıkan olmadı yarına
+Eski fotoğraflar tozlu raflarda saklı
+Gençlik rüzgar gibi esti, geçti haklı
+Geriye kalan sadece birkaç hatıra
+Karıştı gitti hepsi uzak yarınlara
+
+Giden gitti, dönmez geriye asla
+Bakmıyorum artık arkama yasla
+Yeni bir sayfa açılıyor önümde
+Gözlerim parlıyor bu son günümde
+
+Kaybolan yıllar, bırakın yakamı
+Ben artık buldum kendi yolumu, rotamı
+Ağlamak yok gayrı, bu gece bizim
+Zaman akıp gitse de, silinmez izim!
+Kaybolan yıllar... ah o yıllar...
+
+Yaralar kapandı, izleri kaldı sadece
+Her düşüş bir ders oldu bu ince bilmece
+Şimdi daha güçlü, daha net bakıyorum
+Geçmişi ateşe verip, yeniden doğuyorum
+Korkularım yok artık, rüzgar benden yana
+Çevirdim yönümü en parlak limana
+
+Ne varsa geride kaldı...
+Ardıma bile bakmam bundan sonra...
+
+Kaybolan yıllar...
+Geri gelmez ama ben buradayım.
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 5 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>05</span>
+                    <div class="song-name">Hızlı Yaşa</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Motor çalıştı, kırmızı yanıyor
+Kalbim yerinde duramıyor, inanıyor
+Dünya dönüyor biz dönüyoruz peşinden
+Kaçtık hayatın tüm o tozlu işinden
+Dün gece bitmişti, yarın bir sır
+Şimdi bu an, hepsi huzur!
+
+Gazı kökle, dünya silinsin
+İçimizdeki ateş iyice bilinsin
+Durmak bize göre değil biliyorsun
+Sen de benim gibi hızla akıyorsun
+
+Hızlı yaşa, çabuk tüket bu anı
+Bırak geride kalsın tüm o yalanı
+Bu gece sınırsız, bu gece bizim
+Dünyaya kendi imzamı kazıdım
+Hızlı yaşa, asla durma!
+
+Rüzgar yüzümde, neonlar etrafımda
+Dans ediyoruz hayatın tam ortasında
+Kim ne derse desin, bizimdir bu oyun
+Zirveye çıkana kadar, asla durup soluyun
+Korkular geride, biz geleceğin izindeyiz
+Sanki başka bir gezegenin biziz sesi
+
+Saniyeler geçiyor, yakala onları
+Durma, erteleme sakın yarınları!
+
+Hızlı yaşa...
+Sadece anı yaşa...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 6 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>06</span>
+                    <div class="song-name">Son Defa</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Sessizlik çöktü yine bu şehre
+Baktım arkamdan kalan her yere
+Yoruldu kelimeler, bitti cümleler
+Nasıl kıydı bize bu zalim seneler?
+
+Haklıydın belki de, geç kaldık biz
+Geriye sadece düştü bu derin iz
+Şimdi ellerim boş, gözlerim yolda
+Kaldık yine o ıssız sokaklarda
+
+Bir kez daha dokunsam o ellerine
+Bırakmasam zamanı, dönsek geçmişe yine
+
+Son defa sarıl bana, son defa bak gözlerime
+Belki bir daha asla rastlamayız bu sevgine
+Ayrılığın adı batsın, bu hikaye burda btsin
+Son defa yanımda kal, dünya durup sessizleşsin
+
+Gidenin arkasından el sallamak en zoruymuş meğer.
+Yılların birikimi bir saniyede sığarmış gözlere.
+Biliyorum, bu son bakış, bu son veda...
+Ama unutma, bazı aşklar yarım kalır ki ölümsüz ola...
+
+Gidiyorsun biliyorum, tutamam seni...
+Ama kalbimin en orta yerinde bıraktın beni...
+
+Son defa...
+Elveda...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 7 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>07</span>
+                    <div class="song-name">Buz Gibi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Baktım gözlerine, bir yabancı şimdi
+O eski sıcak bakışlar yerini buz gibi kesti
+Ne bir kelime kaldı, ne geriye bir hatıra
+Yoruldum artık bu bitmeyen çıkmaza
+Kapıyı çektim ardımdan, geriye bakmadan
+
+Sanki içimde bir yerler dondu kaldı
+Sıcak olan ne varsa bu şehir aldı
+Şimdi ne arayan var ne soran birini
+Unuttum çoktan o eski neşemi
+
+Buz gibi, ellerim bomboş, içim üşüyor
+Bütün o yalanlar başıma düşüyor
+Gittin ya sen, güneş doğmaz oldu bu eve
+Buz gibi, artık dönsen de nafile!
+
+Gece uzuyor, sabah olmuyor bilirsin
+Sen kendi yoluna, arkana bakmadan gidersin
+Aynadaki adama sordum dün gece
+Değer miydi bu kadar acıya, bu bilmece?
+Cevap vermedi, o da susup kaldı senin gibi
+
+Eriyemez artık buzu tutan kalbim...
+Çok geç, çok uzaklarda kaldı o eski ben...
+
+Buz gibi...
+Sadece sessizlik...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 8 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>08</span>
+                    <div class="song-name">Ruhun Duymaz</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Sustu o rüzgar, fırtına dindi
+Sanma ki bu kalp sana yenildi
+Topladım her şeyi, sildim izleri
+Bekleme benden artık o sözleri
+Çok uzattın sen bu sahte oyunu
+Ben çoktan çizdim kendi yolumu
+
+Öyle bir giderim ki, gölgen yetişmez
+Yaktığım bu ateş bir daha sönmez
+Çoktan değişti oyunun kuralı
+Kapattım kalbimdeki o eski masalı
+
+Ben çeker giderim, ruhun duymaz!
+İstesem de artık sana yer kalmaz
+Uykunda kaybolur tüm o anılar
+Uyandığında başlar en zor yarınlar
+Ben çeker giderim, ruhun duymaz!
+Ruhun duymaz... Ah, ruhun duymaz!
+
+Yüzündeki o emin tavır bitecek
+Yerini büyük bir boşluk seçecek
+O çok güvendiğin yalan dünyanın
+Temeli sarsılıp bir bir çökecek
+Farkına varman inan zaman alacak
+O gün geldiğinde ellerin boş kalacak
+
+Sessiz sedasız, veda bile etmeden...
+Çıkıp gidiyorum senin sahte sahnenden...
+
+Ruhun duymaz...
+Fark etmezsin bile...
+Ben çoktan gittim!
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 9 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>09</span>
+                    <div class="song-name">Asla Geri Dönmem</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Yolun sonu göründü, hata bende mi sandın?
+Her defasında aynı yalanlarla kandın
+Defterler dürüldü, hesap kapandı çoktan
+Sen kendi oyununda boğul şimdi yoktan
+Gözümde bir damla yaş bile kalmadı
+Bu kalp sana artık bir adım atmadı
+
+Köprüleri yaktım arkama bakmadan
+Geçti o günler yalvarıp yakarmadan
+Yeni bir ben doğuyor küllerimden şimdi
+Bileceksin en sonunda bu ayrılık kimindi
+
+Asla geri dönmem, kapandı o defter
+İster ağla istersen günlerce dert et
+Ben kendi yolumu çizmeyi çoktan bildim
+Sen o eski masalda öylece kaldın şimdi
+Asla geri dönmem, bitti bu hikaye!
+
+Rüzgar benden yana, yönüm apayrı bir yer
+Sen kendi derdinde, eskiye inan değer
+Yok artık o eski saf, inatçı aşık
+Şimdi karşında duran, yepyeni bir ışık
+Adını bile sorsalar unutur bu lisan
+Sen kendi dünyanda çal oynamaya devam
+
+Dönmem... Asla geri dönmem...
+Bütün kapılar kapandı sana...
+
+Asla geri dönmem...
+Bitti...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 10 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>10</span>
+                    <div class="song-name">Karanlık Sokaklar</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Adımlarım yankılanır bu ıssız caddede
+Her köşe başında bir hatıra gizli derinde
+Neon ışıkları sönmüş, sokaklar yorgun
+Biz bu şehrin en karanlık yüzüne vurgun
+Arkama bakmam artık, yönüm hep ileri
+Silemem ki geçmişten kalan o izleri
+
+Gece çöker üzerime ağır bir örtü gibi
+Saklanmak nafile, bulur seni herini
+Gözlerimde o soğuk, o bilindik mesafe
+Bu şehir bize dar, bu hikaye saf efsane
+
+Karanlık sokaklar, şahidimdir her şeye
+Bırakıp gittiğin o eski bomboş haneye
+Dönmem geri asla, bu yolun sonu belli
+Yandım bu ateşte, ellerim yine deli
+Karanlık sokaklar... saklar bizi derinden!
+
+Rüzgar sert eser buralarda, acımasız
+Herkes kendi derdinde, herkes vicdansız
+Yıldızlar bile küsmüş, görünmüyor gökyüzü
+Yalancı gülüşlerin soldu çoktan bu yüzü
+Şimdi tek başınayım bu beton yığınında
+Gölgen bile kalmadı artık sol yanımda
+
+Gözlerini kapat ve dinle sokağın sesini...
+Kaybettik zamanında en güzelimizi...
+
+Karanlık sokaklar...
+Sadece biz ve gece...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 11 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>11</span>
+                    <div class="song-name">Aşk Çarpıntısı</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Göğsümde garip bir telaş, yerinde durmuyor
+Adını her duyduğumda akıl başımda kalmıyor
+Sanki yıllardır aradığım o gizli limansın
+İçimde ne kadar korku varsa hepsini yakansın
+
+Aynı rüzgar esiyor sanki bizim yönümüze
+Bakınca gözlerine, boyun eğdim bu sözüne
+Nasıl oldu da bağlandım bu kadar kısa sürede?
+Adım atamaz oldum sensiz geçen her günde
+
+Çözülüyor dilim, tutuluyor ellerim
+Seninle başlıyor bitti dediğim yerlerim
+
+Bu bir aşk çarpıntısı, kalbim yerinden oynar
+Seninle başlayan her gün, dünyama güneş doğar
+İster buna kader de, ister en güzel masal
+Bırakma ellerimi, bu yolda hep benimle kal!
+Aşk çarpıntısı... sensin tek ilacım.
+
+Uzaklardayken bile sesin çınlar kulaklarımda
+Bir mucize gibisin hayatımın en dar anında
+Korkularım silindi gitti senin o gülüşünle
+Tamamlandım nihayet, o muhteşem dönüşünle
+
+Duyuyor musun kalbimin sesini?
+Sadece senin için atıyor bu deli...
+
+Aşk çarpıntısı...
+Sadece sen ve ben...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 12 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>12</span>
+                    <div class="song-name">Göz Göre Göre</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Yürüdük bu yolda hiç arkaya bakmadan
+Bir kibrit çaktık, korktuk mu alevden, yanmadan?
+Göz göre göre geldik bu uçurumun ucuna
+Sen kendi yoluna, ben kaldım kendi suçuma
+
+Biliyorduk sonunu, her şey baştan belliydi
+Gözlerindeki o yabancı bakış en büyük delildi
+Saklamak nafile şimdi geride kalan o yalanı
+Sensizlik sardı bütün bu sessiz salonu
+
+Göz göre göre kaybettik birbirimizi...
+Bir kelime yeterdi oysa kurtarmaya ikimizi.
+Sen gittin, ben kaldım, ellerimiz bomboş...
+Yalanmış meğer bu rüya, dışarısı öyle ayaz, öyle soğuk, öyle loş...
+Adını yazdım kalbime, s silemedim zamanla...
+Ben de yandım bu ateşte, baş başa kaldım bu dumanla...
+Göz göre göre sustu dilimiz...
+Göz göre göre tükendi ömrümüz...
+
+Göz göre göre düştük bu derin karanlığa
+Ne sen dönebilirsin artık, ne ben o yarınlara
+Bitti dediğimiz o yer, başladığımız ilk anmış
+Göz göre göre yanmışız, kim anlarmış?
+Göz göre göre...
+
+Tutamadım ellerini...
+Bıraktın zannettin beni...
+Oysa ikimiz de biliyorduk bu sonun esiri olduğumuzu...
+
+Göz göre göre...
+Elveda...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 13 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>13</span>
+                    <div class="song-name">Yüksek Gerilim</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Kıvılcım çaktı bak, gözlerinde bir ışık
+Etrafımız sarıldı, biz yine çok karışık
+Dokunma sakın, hatlar kopuyor şimdi
+Bu aşkın formülü kimin elindeydi?
+
+Dans pisti yanıyor, ritim kalbime vurdu
+Sanki zaman durdu, dünya bizimle uyudu
+Hadi gel, bozma bu büyülü dengeyi
+Yaşayalım bu gece, bırak tüm o rengi!
+
+Enerji yükseliyor, yer yerinden oynar
+Bu gece ikimiz, sanki yeni bir bahar
+Korkma bu akımdan, bırak bırak aksın!
+
+Yüksek gerilim, kalplerimiz çarpışıyor
+Ritim yükseliyor, tenimiz birbirine karışıyor
+Yüksek gerilim, bu gece sınır yok bize
+Yazalım aşkı en çılgın, en parlak izle
+Yüksek gerilim!
+
+Adım at, yaklaş bana, yanmasın sigortalar
+Gözlerin yeterli, erisin tüm o duvarlar
+Hiçbir şey durduramaz bu akımı şimdi!
+
+Yüksek gerilim...
+Hiç bitmesin bu dans!
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 14 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>14</span>
+                    <div class="song-name">Zirve</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Tırmandık en dik yokuşları, yılmadan durmadan
+Kendi rüzgarımızla geçtik, kimseden sormadan
+Yorulduk ama değdi, her anı bir zafer
+Şimdi güneş üzerimizde, bitti o tüm keder
+Bak aşağıya, ne kadar uzak kaldık dertlere
+
+Işıklar altında, sahne bizim artık
+Yılların yorgunluğunu burada attık
+Sınır yok, korku yok, sadece biz varız
+Bu yolun sonuna değil, en tepesine varırız!
+
+İşte geldik Zirve'ye, ellerimiz gökyüzünde
+Tarih yazılıyor şimdi, bizim her bir sözümüzde
+Parla yıldızlar gibi, sönsün karanlıklar
+Duyulsun sesimiz, tüm dünyayı sarsan yankılar
+Zirve bizim, zafer bizim, bu gece bitmez!
+
+Her düşüş bir adımdı, her acı bir güç oldu
+Kalplerimiz bu gece, sonsuz neşeyle doldu
+Kim ne derse desin, biz kendi rotamızdayız
+Artık bulutların üstünde, bambaşka bir havadayız
+Zirveden bakınca her şey ne kadar da küçük!
+
+Buradan sonrası artık sonsuzluk...
+
+Zirve...
+En tepedeyiz...
+Sonsuza kadar!
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 15 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>15</span>
+                    <div class="song-name">Sabah Olmadan</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Dışarıda şehir uyuyor, dünya suskun yine
+Sanki zaman durdu, takıldık biz bu ana
+Gözlerin bir deniz, boğulur insan içinde
+Bırakma beni sakın, kal bu gecenin izinde
+
+Saatler geçmiyor, güneş doğmaya utansın
+Seninle geçen her an, ruhumda bir iz bıraksın
+Korkma bu sessizlikten, en çok biz yakışıyoruz
+Sanki bu dünyadan, başka bir yere akıyoruz
+
+Zaman bizim, mekan bizim, gece bizimle güzel
+Ne olur hiç bitmesin, bu masal sürsün ezel
+
+Sabah olmadan, al götür beni uzaklara
+Sabah olmadan, düşmeyelim hiç tuzaklara
+Bir ömür sığsın şu kısacık geceye
+Seni sakladım kalbimin en derin yerine
+Sabah olmadan... kal yanımda!
+
+Söylenecek ne kaldı, her şey gözlerinde saklı
+Korkularım silindi, her şey bu gece haklı
+İki ruh, bir beden olduk bu karanlıkta
+Aşkımız en parlak ışık, şu dipsiz boşlukta
+
+Gitme...
+Asla...
+Sabah olmasın, gün doğmasın bu aşkın üzerine...
+
+Sabah olmadan...
+Sadece biz...
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Hepsini kapat
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Tıklanan kapalıysa aç
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
