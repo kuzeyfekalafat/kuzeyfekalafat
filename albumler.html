@@ -13,9 +13,18 @@
         /* Üst Sanatçı Portalı ve Sosyal Medya Bandı */
         .portal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; font-size: 12px; font-weight: 600; color: #fff; padding: 0 5px; flex-wrap: wrap; gap: 10px; }
         .portal-left { display: flex; align-items: center; gap: 6px; letter-spacing: 1px; }
-        .social-icons { display: flex; align-items: center; gap: 10px; }
-        .social-icons a { color: #fff; font-size: 15px; transition: 0.3s; text-decoration: none; }
-        .social-icons a:hover { color: #d4af37; }
+        
+        .social-icons { display: flex; align-items: center; gap: 12px; }
+        .social-icons a { font-size: 16px; transition: 0.3s; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+        .social-icons a:hover { transform: scale(1.2); }
+
+        /* Orijinal Sosyal Medya Marka Renkleri */
+        .social-icons .fa-instagram { color: #e1306c; }
+        .social-icons .fa-x-twitter { color: #ffffff; }
+        .social-icons .fa-youtube { color: #ff0000; }
+        .social-icons .fa-facebook-f { color: #1877f2; }
+        .social-icons .fa-tiktok { color: #00f2fe; }
+        .social-icons .fa-spotify { color: #1db954; }
 
         nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
         nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
@@ -50,7 +59,7 @@
 <body>
 
     <div class="top-content">
-        <!-- Üst Portal ve Sosyal Medya Alanı -->
+        <!-- Üst Portal ve Orijinal Renkli Sosyal Medya Alanı -->
         <div class="portal-header">
             <div class="portal-left">
                 <span>🇹🇷</span> RESMÎ SANATÇI PORTALI
