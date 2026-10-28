@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; }
+        
+        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        
+        h1 { color: #d4af37; font-size: 26px; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; }
+        .subtitle { color: #888; font-size: 13px; margin-bottom: 25px; }
+        
+        .main-box { max-width: 500px; margin: 0 auto 25px auto; background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px; text-align: left; }
+        .artist-img { width: 100%; max-width: 250px; height: auto; border-radius: 50%; border: 3px solid #d4af37; display: block; margin: 0 auto 20px auto; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        
+        .bio-text { color: #ccc; font-size: 14px; line-height: 1.8; text-align: justify; margin-bottom: 15px; }
+        .bio-highlight { color: #d4af37; font-weight: bold; }
+
+        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; }
+        .footer-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+        .footer-icons a { color: #888; font-size: 16px; text-decoration: none; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="portal-title">RESMÎ SANATÇI PORTALI</div>
+
+    <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="hakkinda.html" class="active">Hakkımda</a>
+        <a href="albumler1.html">Albümler</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="sosyal-medya.html">Sosyal Medya</a>
+    </nav>
+
+    <h1>HAKKIMDA</h1>
+    <div class="subtitle">Biyografi & Sanatçı Kimliği</div>
+
+    <div class="main-box">
+        <!-- Profil Fotoğrafı (İleride profil.jpg yükleyince görünür) -->
+        <img src="profil.jpg" alt="Kuzeyfe Kalafat" class="artist-img" onerror="this.style.display='none'">
+        
+        <p class="bio-text">
+            <span class="bio-highlight">Kuzeyfe Kalafat</span>, modern Türk pop müziği ve özgün müzik üretimi alanında eserler üreten resmî sanatçı, söz yazarı ve prodüktördür.
+        </p>
+        <p class="bio-text">
+            Müzik kariyeri boyunca kendi kaleme aldığı şarkı sözleri ve özgün yapımlarıyla öne çıkan sanatçı, eserlerini dijital platformlarda ve resmî müzik portallarında dinleyicileriyle buluşturmaktadır.
+        </p>
+        <p class="bio-text">
+            Zaman Perdesi Yapım Prodüksiyon bünyesinde çalışmalarını sürdüren Kuzeyfe Kalafat, ürettiği geniş albüm külliyatı ve şarkı arşiviyle Türk pop müziğinde kalıcı bir iz bırakmayı hedeflemektedir.
+        </p>
+    </div>
+
+    <footer>
+        <div class="footer-icons">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-x-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-spotify"></i>
+        </div>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+</body>
+</html>
