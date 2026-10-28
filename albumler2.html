@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SON SÖZ | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; }
+        
+        .top-content { max-width: 450px; margin: 0 auto; width: 100%; }
+
+        .portal-header { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .portal-flag { font-size: 14px; }
+        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+        
+        .top-social-icons { display: flex; align-items: center; gap: 8px; }
+        .top-social-icons a { font-size: 13px; text-decoration: none; display: flex; align-items: center; }
+        
+        .color-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .color-yt { color: #ff0000; }
+        .color-fb { color: #1877f2; }
+        .color-tk { color: #fe2c55; }
+        .color-sp { color: #1db954; }
+        
+        .x-svg-icon { width: 13px; height: 13px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+        .footer-x-svg { width: 16px; height: 16px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        
+        h1 { color: #d4af37; font-size: 26px; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; }
+        .subtitle { color: #888; font-size: 13px; margin-bottom: 25px; }
+        
+        .main-box { max-width: 500px; margin: 0 auto 25px auto; background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        .album-header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 20px; }
+        .album-cover { width: 180px; height: 180px; object-fit: cover; border-radius: 12px; border: 2px solid #d4af37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); margin-bottom: 15px; }
+        .album-title { color: #d4af37; font-size: 20px; font-weight: bold; letter-spacing: 1px; }
+        .album-info { color: #777; font-size: 12px; margin-top: 5px; }
+
+        .tracklist { display: flex; flex-direction: column; gap: 12px; }
+        .track-item { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .track-item:hover { border-color: #d4af37; }
+        
+        .track-header { padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .track-number { color: #d4af37; font-weight: bold; margin-right: 10px; font-size: 14px; }
+        .track-name { color: #fff; font-size: 14px; font-weight: 600; flex-grow: 1; }
+        .track-icon { color: #888; font-size: 12px; transition: transform 0.3s; }
+
+        .track-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: #111; padding: 0 18px; border-top: 1px solid transparent; }
+        .track-content p { color: #bbb; font-size: 13px; line-height: 1.8; padding: 15px 0; }
+        .song-credits { color: #d4af37; font-size: 12px; font-style: italic; margin-bottom: 12px; border-bottom: 1px dashed #333; padding-bottom: 8px; font-weight: 600; }
+
+        .track-item.open .track-icon { transform: rotate(180deg); color: #d4af37; }
+        .track-item.open .track-content { max-height: 3500px; border-top-color: #222; }
+
+        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; text-align: center; }
+        .footer-icons { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .footer-icons a { font-size: 18px; text-decoration: none; display: flex; align-items: center; transition: 0.3s; }
+        .footer-icons a:hover { transform: scale(1.2); }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <div class="portal-header">
+            <span class="portal-flag" title="Türkiye">🇹🇷</span>
+            <span class="portal-title">RESMÎ SANATÇI PORTALI</span>
+            <div class="top-social-icons">
+                <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                    <svg class="x-svg-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+                <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html">Albüm 1</a>
+            <a href="albumler2.html" class="active">Son Söz</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+    </div>
+
+    <h1>SON SÖZ</h1>
+    <div class="subtitle">Albüm 2 • Şarkı Sözleri & Detaylar</div>
+
+    <div class="main-box">
+        <div class="album-header">
+            <img src="album2.jpg" alt="Son Söz Albüm Kapağı" class="album-cover" onerror="this.src='profil.jpg'">
+            <div class="album-title">SON SÖZ</div>
+            <div class="album-info">Zaman Perdesi Music • 14 Şarkı</div>
+        </div>
+
+        <div class="tracklist">
+
+            <!-- Şarkı 1 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">01</span>
+                    <span class="track-name">Gölge & Düet</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Gözlerinde bulduğum o sahte cennet,<br>
+                        Meğer arkamdan örülen ipekten bir kafes.<br>
+                        Sana feda edilen o koskoca ömre,<br>
+                        Değmedi be kanka, tükendi son nefes.<br><br>
+                        Güvendiğim dağlara karlar yağmadı,<br>
+                        Direkt çığ düştü, altında kaldın.<br>
+                        Ben seni göklerde bir yıldız sanarken,<br>
+                        Karanlık bir gölgenin koynunda uyandım.<br><br>
+                        Aşk dediğin bir ihanet kumarıymış,<br>
+                        Kazananı yok, kaybedeni çok.<br>
+                        Yalnızlık artık bizim tek yoldaşımız,<br>
+                        Senin yalanlarına bu kalemde yer yok!<br><br>
+                        Sustu tüm şehir, ışıklar söndü,<br>
+                        Senin o sahte yüzün gerçeğe döndü.<br>
+                        Hesap sormuyorum artık kaderden,<br>
+                        Sildim adını, bu hikaye bugün öldü.<br><br>
+                        Gölgen bile terk eder insanı karanlıkta,<br>
+                        Sen kalmışsın çok mu bu yalnızlıkta?<br><br>
+                        Sadece bir gölgeydin...<br>
+                        Sadece bir gölge...<br>
+                        Geçti gitti...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 2 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">02</span>
+                    <span class="track-name">Kör Düğüm & Düet</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Yangın yeri bu kalbe bir de sen üfledin,<br>
+                        Seni kutsal bilip dualar etmedim mi?<br>
+                        Her gece hüznü kadehe meze yapıp,<br>
+                        Ben bu ömrü senin yoluna sermedim mi?<br><br>
+                        Ama bitti o devir, sustu o saf çocuk,<br>
+                        Gönül kapısı artık sana sonuna kadar kapalı.<br>
+                        Sen git o sahte sevdalarında avun şimdi,<br>
+                        Bu yürek senden çoktan alacaklı!<br><br>
+                        Aşk dediğin kör düğümdü, çektim kopardım!<br>
+                        Sana tapan o faniyi kendi ellerimle yaktım!<br>
+                        Sözüm geçmezdi hani o yalan dünyana?<br>
+                        Bak şimdi o tahtını başına yıktım!<br><br>
+                        Geri dönüşü yok, köprüleri çoktan yaktım,<br>
+                        Senin o süslü yalanlarını tek kalemde sattım.<br>
+                        Şimdi hangi rüzgarda savrulursan savrul,<br>
+                        Ben seni kalbimin en derin mezarına attım.<br><br>
+                        Çektim kopardım... Bitti!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 3 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">03</span>
+                    <span class="track-name">Gece ve Sis & Düet</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Saat gece yarısını çoktan geçti,<br>
+                        Şehir sustu, herkes kendi yolunu seçti.<br>
+                        Elimde bir kadeh, karşımda boş koltuk,<br>
+                        Biz seninle kanka, ne ara böyle yok olduk?<br><br>
+                        Sokaklar ıslak, sis çökmüş şehre,<br>
+                        Benzerim kalmamış dertten eriyen şu nehre.<br>
+                        Bir zamanlar kalabalık olan bu koca dünya,<br>
+                        Şimdi dönüştü tek kişilik bir kabusa.<br><br>
+                        Gece ve sis, bizim yeni sırdaşımız,<br>
+                        Yalnızlık artık yastıktaki tek başımız.<br>
+                        Gelen gitmiş, kalan yıkılmış zaten,<br>
+                        Bu karanlık limanda bitti artık savaşımız.<br><br>
+                        Telefon sessiz, odada sadece saatin sesi,<br>
+                        Duvarlar üstüme geliyor, daralıyor nefesim.<br>
+                        Sen o parıltılı ışıkların altında eğlenirken,<br>
+                        Burada yavaşça sönüyor bir adamın hevesi.<br><br>
+                        Kimse bilmez kalbin kaç yerinden kırıldığını,<br>
+                        Gecenin bu vaktinde nasıl tek başına kaldığını...<br><br>
+                        Sadece gece ve sis...<br>
+                        Yalnızlık ve biz...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 4 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">04</span>
+                    <span class="track-name">Kırmızı Hat</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Sabrımı deneme, sınırdasın artık,<br>
+                        Aramızdaki o ince bağları kopardık.<br>
+                        Sen o ucuz oyunlarına devam et dur,<br>
+                        Biz seninle çoktan farklı yollara saptık.<br><br>
+                        Lafı hiç dolandırma, vaktim çok değerli,<br>
+                        Bu yüksek tempo seni benden de beter etti.<br>
+                        Herkes yerini bilsin, roller çoktan seçildi,<br>
+                        Senin hükmün bu hikayede bugün bitti.<br><br>
+                        Çizdim kırmızı hattı, geçemezsin bir daha!<br>
+                        Adını anmam, düşmem aynı günaha!<br>
+                        Bu oyunun kuralını ben yazdım baştan,<br>
+                        Sana ayrılan sürenin sonuna geldik bak tık tık!<br><br>
+                        Işıklar altında herkes maskesini takmış,<br>
+                        Senin o sahte dünyan çoktan kararmış.<br>
+                        Hesap kitap yapma, vizyonumuz farklı,<br>
+                        Gördüğün gibi bu kanka her zaman haklı.<br><br>
+                        Geri sayım başladı, ritim yükseliyor içimde,<br>
+                        Artık yerin yok bu asil sahnede!<br><br>
+                        Kırmızı hat çekildi... Süre bitti!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 5 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">05</span>
+                    <span class="track-name">Kırmızı Hat (Remix)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Sabrımı deneme, sınırdasın artık,<br>
+                        Aramızdaki o ince bağları kopardık.<br>
+                        Sen o ucuz oyunlarına devam et dur,<br>
+                        Biz seninle çoktan farklı yollara saptık.<br><br>
+                        Lafı hiç dolandırma, vaktim çok değerli,<br>
+                        Bu yüksek tempo seni benden de beter etti.<br>
+                        Herkes yerini bilsin, roller çoktan seçildi,<br>
+                        Senin hükmün bu hikayede bugün bitti.<br><br>
+                        Çizdim kırmızı hattı, geçemezsin bir daha!<br>
+                        Adını anmam, düşmem aynı günaha!<br>
+                        Bu oyunun kuralını ben yazdım baştan,<br>
+                        Sana ayrılan sürenin sonuna geldik bak tık tık!<br><br>
+                        Işıklar altında herkes maskesini takmış,<br>
+                        Senin o sahte dünyan çoktan kararmış.<br>
+                        Hesap kitap yapma, vizyonumuz farklı,<br>
+                        Gördüğün gibi bu kanka her zaman haklı.<br><br>
+                        Geri sayım başladı, ritim yükseliyor içimde,<br>
+                        Artık yerin yok bu asil sahnede!<br><br>
+                        Kırmızı hat çekildi... Süre bitti!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 6 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">06</span>
+                    <span class="track-name">Girdap</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Dönüp duruyor zihnim aynı sokakta,<br>
+                        Kaybolmuş ruhlar var soluk ışıkta.<br>
+                        Sen bir oyun kurdun kendi çapında,<br>
+                        Ama unuttun, benim adım her sayfada.<br><br>
+                        Adım adım yaklaştın sonun başlangıcına,<br>
+                        Dayanamazsın bu yüksek temponun acısına.<br>
+                        Çırpındıkça batan bir yabancısın artık,<br>
+                        Gözümün önündeki o perdeyi çoktan yırttık.<br><br>
+                        Seni çeker bu girdap, kurtulamazsın!<br>
+                        Beni yıktığın yerde tek kalacaksın!<br>
+                        Bu derin dalgalar yutar adını,<br>
+                        Bak şimdi uzaktan ağlayacaksın!<br><br>
+                        Sesler yükselir ritmin tam ortasında,<br>
+                        Gerçekler gizli bu füme gecenin koynunda.<br>
+                        Geriye dönmek için çok geç kaldın sen,<br>
+                        Çıkış yolu yok bu büyük oyunun haritasında.<br><br>
+                        Ritim hızlanır, nefesler daralır,<br>
+                        Bu karanlık sahnede sadece asiller kalır!<br><br>
+                        Dönüyor bu girdap... Son buldu!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 7 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">07</span>
+                    <span class="track-name">Girdap (Remix)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Dönüp duruyor zihnim aynı sokakta,<br>
+                        Kaybolmuş ruhlar var soluk ışıkta.<br>
+                        Sen bir oyun kurdun kendi çapında,<br>
+                        Ama unuttun, benim adım her sayfada.<br><br>
+                        Adım adım yaklaştın sonun başlangıcına,<br>
+                        Dayanamazsın bu yüksek temponun acısına.<br>
+                        Çırpındıkça batan bir yabancısın artık,<br>
+                        Gözümün önündeki o perdeyi çoktan yırttık.<br><br>
+                        Seni çeker bu girdap, kurtulamazsın!<br>
+                        Beni yıktığın yerde tek kalacaksın!<br>
+                        Bu derin dalgalar yutar adını,<br>
+                        Bak şimdi uzaktan ağlayacaksın!<br><br>
+                        Sesler yükselir ritmin tam ortasında,<br>
+                        Gerçekler gizli bu füme gecenin koynunda.<br>
+                        Geriye dönmek için çok geç kaldın sen,<br>
+                        Çıkış yolu yok bu büyük oyunun haritasında.<br><br>
+                        Ritim hızlanır, nefesler daralır,<br>
+                        Bu karanlık sahnede sadece asiller kalır!<br><br>
+                        Dönüyor bu girdap... Son buldu!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 8 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">08</span>
+                    <span class="track-name">Kayıp Şehir</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Neon ışıklar altında bir başıma,<br>
+                        Sokaklar şahit bu yeni savaşıma.<br>
+                        Sen beni unuttun sanıyorsun ama,<br>
+                        Gölgem bile ağır gelir senin dünyana.<br><br>
+                        Hızlanıyor ritim, kalbim atıyor bak,<br>
+                        Eski hatıraları arkada bırak.<br>
+                        Geri sayım başladı bu kayıp şehirde,<br>
+                        Senin adın artık okunmaz tek bir hecede.<br><br>
+                        Koşuyorum karanlığa, durduramazsın!<br>
+                        Bu yüksek tempoda bana yetişemezsin!<br>
+                        Kayıp şehir uyandı, ışıklar yandı,<br>
+                        Sana inanan o saf çocuk çoktan uyandı!<br><br>
+                        Gece uzun, yollar açık önümde,<br>
+                        Senin sahte sevdan yok artık dilimde.<br>
+                        Zirveye giden bu yüksek hızlı trende,<br>
+                        Yerin yok senin, bitti bu hikaye de.<br><br>
+                        Synth sesleri yükselir, ritim vurur derinden,<br>
+                        Kayıp şehir sallanır asil sesimden!<br><br>
+                        Kayıp şehirde ışıklar sönerken... Geriye bakma!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 9 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">09</span>
+                    <span class="track-name">Altın Taht</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Sessizlik bitti, büyük perde açıldı,<br>
+                        Karanlık odaya asil bir ışık saçıldı.<br>
+                        Küçük oyunlarla taht sahibi olanlar,<br>
+                        Gördü gerçeği, hepsi bir yana kaçıldı.<br><br>
+                        Ritim yükselir, surlar sallanır derinden,<br>
+                        Kimse ayıramaz bu kalbi kendi yerinden.<br>
+                        Geri sayım bitti, artık vakit geldi,<br>
+                        0-NOKTA gücü tüm kuralları deldi.<br><br>
+                        Geri döndüm bak, hazırla o altın tahtı!<br>
+                        Karanlık geceden aydınlandı bu şansım, bahtı!<br>
+                        Gölgeniz bile diz çöker bu asil duruşa,<br>
+                        Hükmetmek yakışır vizyonu yüksek olan krala!<br><br>
+                        Sözler kurşun gibi, ritim durmaz vurur,<br>
+                        Bu yüksek zirvede sadece asiller durur.<br>
+                        Hesap bitti kanka, kapandı tüm sayfalar,<br>
+                        Şimdi önümde eğilir o sahte krallar.<br><br>
+                        Devasa senfonik sesler yükselir gökyüzüne,<br>
+                        Herkes şahit olacak bu asil gücün sözüne!<br><br>
+                        Altın taht kuruldu... Kral yerinde!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 10 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">10</span>
+                    <span class="track-name">Bal Gibi (Oyunun Kuralı)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Baktım gözlerine, dünya durdu bir an,<br>
+                        Kural belli, rota aynı; kaçış yok inan.<br>
+                        Sessizliğin sesi, derin bir liman,<br>
+                        Oyunun hakimi, benim bu zaman.<br><br>
+                        Gözlerim yalan mı, sende cevabı var,<br>
+                        Birlikte yürüdük, geçti bütün o kışlar.<br>
+                        Yollar bize çıkar, gölgelerden sakınma,<br>
+                        Kendi kurallarımızla, ateşten kaçınma.<br><br>
+                        Bal gibi, bal gibi, tatlı bir oyun bu!<br>
+                        Zirveye kurulmuş, belli ki yolumuz!<br>
+                        Birleşti kalplerimiz, en tepede buluşuruz!<br><br>
+                        Vazgeçmem! / Ben de buradayım!<br>
+                        Son sözü biz söyleriz! / Geceyi biz yakarız!<br><br>
+                        Bal gibi, bal gibi, tatlı bir oyun bu!<br>
+                        Zirveye kurulmuş, belli ki yolumuz!<br>
+                        Birleşti kalplerimiz, en tepede buluşuruz!<br><br>
+                        Oyunun kuralı... Bal gibi.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 11 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">11</span>
+                    <span class="track-name">Bal Gibi (Remix)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Baktım gözlerine, dünya durdu bir an,<br>
+                        Kural belli, rota aynı; kaçış yok inan.<br>
+                        Sessizliğin sesi, derin bir liman,<br>
+                        Oyunun hakimi, benim bu zaman.<br><br>
+                        Gözlerim yalan mı, sende cevabı var,<br>
+                        Birlikte yürüdük, geçti bütün o kışlar.<br>
+                        Yollar bize çıkar, gölgelerden sakınma,<br>
+                        Kendi kurallarımızla, ateşten kaçınma.<br><br>
+                        Bal gibi, bal gibi, tatlı bir oyun bu!<br>
+                        Zirveye kurulmuş, belli ki yolumuz!<br>
+                        Birleşti kalplerimiz, en tepede buluşuruz!<br><br>
+                        Vazgeçmem! / Ben de buradayım!<br>
+                        Son sözü biz söyleriz! / Geceyi biz yakarız!<br><br>
+                        Bal gibi, bal gibi, tatlı bir oyun bu!<br>
+                        Zirveye kurulmuş, belli ki yolumuz!<br>
+                        Birleşti kalplerimiz, en tepede buluşuruz!<br><br>
+                        Bal gibi... Oyunun kuralı.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 12 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">12</span>
+                    <span class="track-name">Yalan Mıydı?</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Hava kapandı yine, bulutlar üzerimde,<br>
+                        Bir buruk sitem var şu yorgun yüreğimde.<br>
+                        Yağmur damlaları camlara vuruyorken,<br>
+                        Senin o sahte yüzün canlanır gözlerimde.<br><br>
+                        Gözlerime bakıp da yeminler ediyordun,<br>
+                        Söyle, bu fırtınayı bana nasıl reva gördün?<br><br>
+                        Yalan mıydı o sözler, yalan mıydı bakışın?<br>
+                        Bir kış günü kalbimi kor gibi tek yakışın?<br>
+                        Söyle ey vefasız, bu bendeki acı yalan mı?<br>
+                        Gözünden akan o damlalar yalan mı, yalan mı?<br>
+                        Of... yalan mıydı...<br><br>
+                        Sürmene yolları gibi dolambaçlı yolların,<br>
+                        Isıtmadı içimi o buz tutan kolların.<br>
+                        Şimdi bu dertli yağmur ikimiz için ağlar,<br>
+                        Sessizce eriyor bak, o arkamızda kalan dağlar.<br><br>
+                        Yalan mıydı o sözler, yalan mıydı bakışın?<br>
+                        Her şeyinle yalanmışsın... Bu yağmur da şahidim olsun... Yalan mıydı...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 13 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">13</span>
+                    <span class="track-name">Son Söz (Original Mix)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Işıklar yandı, perde açıldı yine,<br>
+                        Sıradan bir gün değil bu büyük sahne.<br>
+                        Herkes yerini alsın dikkatle izlesin,<br>
+                        Bizim hikayemiz şimdi herkes dinlesin.<br><br>
+                        Bu son söz, artık oyun bitti!<br>
+                        Zirveye giden tüm yollar bize kilitli.<br>
+                        Geriye bakmam, önümde tek biz var,<br>
+                        Son nokta değil, bu bizim gerçek zaferimiz var.<br><br>
+                        Rakipler suskun, gölgeler çok uzak,<br>
+                        Yolumuz uzun ama adımlarımız berrak.<br>
+                        Ne bir hata, ne de bir geri dönüş,<br>
+                        Bu bizim tarzımız, bu bizim tek gülüş.<br><br>
+                        Bu son söz, artık oyun bitti!<br>
+                        Zirveye giden tüm yollar bize kilitli.<br>
+                        Geriye bakmam, önümde tek biz var,<br>
+                        Son nokta değil, bu bizim gerçek zaferimiz var.<br><br>
+                        Bu bizim zaferimiz... Son söz!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Şarkı 14 -->
+            <div class="track-item">
+                <div class="track-header" onclick="toggleTrack(this)">
+                    <span class="track-number">14</span>
+                    <span class="track-name">Son Söz (Remix)</span>
+                    <i class="fas fa-chevron-down track-icon"></i>
+                </div>
+                <div class="track-content">
+                    <p>
+                        <div class="song-credits">Söz: Kuzeyfe Kalafat</div>
+                        Işıklar yandı, perde açıldı yine,<br>
+                        Sıradan bir gün değil bu büyük sahne.<br>
+                        Herkes yerini alsın dikkatle izlesin,<br>
+                        Bizim hikayemiz şimdi herkes dinlesin.<br><br>
+                        Bu son söz, artık oyun bitti!<br>
+                        Zirveye giden tüm yollar bize kilitli.<br>
+                        Geriye bakmam, önümde tek biz var,<br>
+                        Son nokta değil, bu bizim gerçek zaferimiz var.<br><br>
+                        Rakipler suskun, gölgeler çok uzak,<br>
+                        Yolumuz uzun ama adımlarımız berrak.<br>
+                        Ne bir hata, ne de bir geri dönüş,<br>
+                        Bu bizim tarzımız, bu bizim tek gülüş.<br><br>
+                        Bu son söz, artık oyun bitti!<br>
+                        Zirveye giden tüm yollar bize kilitli.<br>
+                        Geriye bakmam, önümde tek biz var,<br>
+                        Son nokta değil, bu bizim gerçek zaferimiz var.<br><br>
+                        Bu bizim zaferimiz... Son söz!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                <svg class="footer-x-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+            <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
+        </div>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+    <script>
+        function toggleTrack(element) {
+            const trackItem = element.parentElement;
+            trackItem.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
