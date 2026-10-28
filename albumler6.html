@@ -1,1 +1,671 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albüm 6 | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
+        .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
+        nav a:hover { border-color: #d4af37; color: #d4af37; }
+        
+        .album-header-box { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px 20px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+        .album-title { color: #d4af37; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; text-transform: uppercase; font-weight: bold; }
+        .album-info { color: #888; font-size: 12px; letter-spacing: 1px; }
 
+        .accordion-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; text-align: left; }
+        .accordion-item { background: #141414; border: 1px solid #222; border-radius: 12px; overflow: hidden; transition: 0.3s; }
+        .accordion-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .accordion-header span { color: #d4af37; font-weight: bold; font-size: 14px; }
+        .accordion-header .song-name { color: #fff; font-size: 14px; font-weight: 600; text-transform: uppercase; flex-grow: 1; margin-left: 15px; }
+        .accordion-header i { color: #d4af37; font-size: 12px; transition: transform 0.3s; }
+        
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 20px; background: #111; color: #ccc; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+        
+        .credits { margin-top: 15px; padding-top: 12px; border-top: 1px dashed #333; color: #d4af37; font-size: 12px; font-weight: 600; }
+
+        /* Açıldığında */
+        .accordion-item.active .accordion-content { max-height: 3000px; padding: 20px; }
+        .accordion-item.active .accordion-header i { transform: rotate(180deg); }
+        .accordion-item.active { border-color: #d4af37; }
+
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html" class="active">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+
+        <div class="album-header-box">
+            <div class="album-title">6. ALBÜM</div>
+            <div class="album-info">Zaman Perdesi Music • 14 Şarkı</div>
+        </div>
+
+        <div class="accordion-container">
+            
+            <!-- Şarkı 1 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>01</span>
+                    <div class="song-name">Akşam Güneşi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+İndi gün batımı, sokağa yansıdı turuncu renk
+Yaz akşamı başladı, sanki her şey bambaşka bir ahenk
+Denizden esiyor hafif, ılık bir rüzgar
+Bu sokakta durulmaz, bizi bekliyor anlar!
+
+Güneş veda ederken ufukta yavaş yavaş
+Bu coşkuya ayak uydurur inan bütün arkadaş
+Hadi çıkalım dışarı, gece yeni başlıyor!
+
+Vurdu yüreğimize sıcak bir Akdeniz ateşi!
+Bu ritmin dünyada var mı sence bir eşi?
+Çalıyor şarkılar sokakta, dillerde yine bizim adımız
+Yaz akşamı bu, en güzel zamanımız!
+Hadi yak ateşi, durmasın bu ayaklar!
+
+Işıklar yandı birden, hareketlendi bütün sahil
+Bu coşkudan uzak kalan olamaz asla dahil
+Göz göze gelince anlar herkes bu frekansı
+Biz kurduk bu gecenin en eğlenceli çarkını!
+
+Güneş veda ederken ufukta yavaş yavaş
+Bu coşkuya ayak uydurur inan bütün arkadaş
+Hadi çıkalım dışarı, gece yeni başlıyor!
+
+Vurdu yüreğimize sıcak bir Akdeniz ateşi!
+Bu ritmin dünyada var mı sence bir eşi?
+Çalıyor şarkılar sokakta, dillerde yine bizim adımız
+Yaz akşamı bu, en güzel zamanımız!
+Hadi yak ateşi, durmasın bu ayaklar!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>02</span>
+                    <div class="song-name">Sahil Yolu</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Camlar açık, rüzgâr vuruyor yüzüme hafif hafif
+Şehir geride kaldı, bak burası bambaşka bir keyif
+Direksiyonda ellerim, aklımda sadece bu gece
+Yolumuz sahil yolu, gidiyoruz hep birlikte!
+
+Ufukta parlıyor lambalar, deniz çarşaf gibi düz
+Bu akşam burda bitmez, eğlence sürer sabaha düz!
+Hadi ver gazı, bass vursun derinden!
+
+Akıp gidiyor zaman sahilde, dalgalar ses veriyor!
+Bu yaz akşamı kalplerimiz aynı ritimde atıyor!
+Sahil yolu, rüzgâr ve biz, başka kimse yok ki lazım
+En güzel şarkımız çalıyor, bu bizim yazımız!
+Hadi bas pedala, durmasın bu yolculuk!
+
+Yandıkça yanıyor içimizdeki o tatlı coşku
+Bu sahil yolu sanki bize ezelden bir dostu
+Göz kırpıyor yıldızlar, neon ışıklar sarmış etrafı
+Hiç kimse tutamaz artık bu kalbin saf telâşını!
+
+Ufukta parlıyor lambalar, deniz çarşaf gibi düz
+Bu akşam burda bitmez, eğlence sürer sabaha düz!
+Hadi ver gazı, bass vursun derinden!
+
+Akıp gidiyor zaman sahilde, dalgalar ses veriyor!
+Bu yaz akşamı kalplerimiz aynı ritimde atıyor!
+Sahil yolu, rüzgâr ve biz, başka kimse yok ki lazım
+En güzel şarkımız çalıyor, bu bizim yazımız!
+Hadi bas pedala, durmasın bu yolculuk!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>03</span>
+                    <div class="song-name">Yaz Yağmuru</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Sıcak bastı ortalığı, gökyüzü bir anda bulutlandı
+Sokaktaki herkesin neşesi birden katlandı
+Yaz akşamı serinliği, damlalar düşerken yere
+Gülüşmeler karıştı bak en tatlı seslere!
+
+Gök gürültüsü değil sanki ritim tutuyor doğa!
+Islansın saçlarımız, aldırmayız ki asla!
+Hadi koşalım yağmura, saklanmak yok bu gece!
+
+Bir yaz yağmuru bastı, ortalık şenlendi birden!
+Serinletiyor içimizi, ne güzel esiyor rüzgâr derinden!
+Sırılsıklam olsa da kalpler, neşe dolu bu akşam
+Yaz yağmuru altında dans ediyor bütün bu mekan!
+Hadi salla başını, ıslansın ellerimiz!
+
+Su damlaları parlıyor sokak lambasının altında
+Böyle bir coşku var mıdır dünyanın başka bir katında?
+Herkes saçak altından çıkmış, katılıyor bu oyuna
+Yaz yağmuru mühür vurdu en güzel anımıza!
+
+Gök gürültüsü değil sanki ritim tutuyor doğa!
+Islansın saçlarımız, aldırmayız ki asla!
+Hadi koşalım yağmura, saklanmak yok bu gece!
+
+Bir yaz yağmuru bastı, ortalık şenlendi birden!
+Serinletiyor içimizi, ne güzel esiyor rüzgâr derinden!
+Sırılsıklam olsa da kalpler, neşe dolu bu akşam
+Yaz yağmuru altında dans ediyor bütün bu mekan!
+Hadi salla başını, ıslansın ellerimiz!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>04</span>
+                    <div class="song-name">Kumsal Ritimleri</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Ayakkabılar çıktı, ayaklarımız buldu kumu
+Sahilde ateş yandı, duyuluyor dalga sesi umudu
+Gündüzün stresi gitti, başladı gecenin neşesi
+Bu kumsalın altında saklı bütün bu eğlencenin sesi!
+
+Ateşin etrafında halka oldu bütün dostlar
+Bu coşkuyu durduramaz inan hiçbir yoldan!
+Hadi verelim el ele, dalgalara karışsın sesimiz!
+
+Vuruyor kumsal ritimleri kalbimizin ta içine!
+Bu yaz akşamı değişmez ki kimsenin biçimi ne!
+Kumlar üzerinde dans, ateşin sıcaklığı yüzümüzde
+Kumsal ritimleri çaldıkça neşe tavan gökyüzünde!
+Hadi salla kollarını, kumsalda sabaha kadar!
+
+Yıldızlar tavanımız, rüzgâr eşlik ediyor sese
+Böyle bir özgürlük sığmaz inan ki kafese
+Gözler gülüyor herkesin, dalgalar vuruyor kıyıya
+Bu kumsal partisi damga vurdu bütün bu yıla!
+
+Ateşin etrafında halka oldu bütün dostlar
+Bu coşkuyu durduramaz inan hiçbir yoldan!
+Hadi verelim el ele, dalgalara karışsın sesimiz!
+
+Vuruyor kumsal ritimleri kalbimizin ta içine!
+Bu yaz akşamı değişmez ki kimsenin biçimi ne!
+Kumlar üzerinde dans, ateşin sıcaklığı yüzümüzde
+Kumsal ritimleri çaldıkça neşe tavan gökyüzünde!
+Hadi salla kollarını, kumsalda sabaha kadar!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 5 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>05</span>
+                    <div class="song-name">Meltem Esintisi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Pencereyi açtım birden, içeri doldu ılık rüzgâr
+Sanki bütün mahallede bu gece bir başka telden çalar
+Yorgunluk falan kalmadı, meltem aldı götürdü her şeyi
+Böyle bir akşamda bulduk hayatın en tatlı neşeyi!
+
+Hafiften sallanıyor balkonun sarmaşıkları
+Bu esinti dindirir kalpteki tüm sancıları
+Hadi çıkalım balkona, meltem karşılıyor bizi!
+
+Esiyor meltem esintisi, saçlarımız savruluyor!
+Bu yaz akşamı bütün sokak aşka uyanıyor!
+Ne bir tasla kalmış dert, ne de geride kalan hüzün
+Meltem esintisi vurunca gülüyor her yüzün!
+Hadi al eline bardağı, rüzgâra ver yönünü!
+
+Yıldızlar parıl parıl, gökyüzü çarşaf gibi mavi
+Bu akşam bambaşka akıyor hayatın nehirleri
+Sokaklar hareketli, herkes kapılmış bu havaya
+Meltem esintisi imza atıyor bu rüya dünyaya!
+
+Hafiften sallanıyor balkonun sarmaşıkları
+Bu esinti dindirir kalpteki tüm sancıları
+Hadi çıkalım balkona, meltem karşılıyor bizi!
+
+Esiyor meltem esintisi, saçlarımız savruluyor!
+Bu yaz akşamı bütün sokak aşka uyanıyor!
+Ne bir tasla kalmış dert, ne de geride kalan hüzün
+Meltem esintisi vurunca gülüyor her yüzün!
+Hadi al eline bardağı, rüzgâra ver yönünü!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 6 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>06</span>
+                    <div class="song-name">Sokak Lambası</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Sarı ışık vuruyor kaldırıma, gölgemiz uzuyor yana doğru
+Sokak lambasının altındayız, bu gece her şey pek bir hoşulu
+Gece yarısı olmuş, kimsecikler yok sanki caddede
+Biz bize kalmışız yine bu güzel yaz gecesinde!
+
+Ayak seslerimiz yankılanıyor taş duvarlarda
+Böyle bir huzur var mıdır acaba başka diyarda?
+Hadi mırıldanalım şarkıyı, sokak lambası şahidimiz!
+
+Yanıyor sokak lambası, aydınlatıyor adımlarımızı!
+Bu yaz akşamı sardı yine bütün duygularımızı!
+Yürüyoruz el ele, gece uzun, sokaklar bizim
+Sokak lambası altında saklı en güzelimiz, sözümüz!
+Hadi devam edelim yola, daha çok yolumuz var!
+
+Eski taş sokaklar serinlemiş günün sıcaklığından
+Bir melodi tutturmuşuz, vazgeçmeyiz bu heyecandan
+Balkondan sarkan çiçekler kokuyor hafiften yana
+Sokak lambası ışık tutuyor bu tatlı rüyaya!
+
+Ayak seslerimiz yankılanıyor taş duvarlarda
+Böyle bir huzur var mıdır acaba başka diyarda?
+Hadi mırıldanalım şarkıyı, sokak lambası şahidimiz!
+
+Yanıyor sokak lambası, aydınlatıyor adımlarımızı!
+Bu yaz akşamı sardı yine bütün duygularımızı!
+Yürüyoruz el ele, gece uzun, sokaklar bizim
+Sokak lambası altında saklı en güzelimiz, sözümüz!
+Hadi devam edelim yola, daha çok yolumuz var!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 7 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>07</span>
+                    <div class="song-name">Gecenin Rengi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Ufukta son turuncu çizgiler de silindi gitti
+Gündüzün o telaşı bitti, şimdi gerçek eğlence geldi!
+Neonlar parlamaya başladı, sokaklar rengârenk
+Bu gecenin ritmiyle herkes sanki tek bir ahenk!
+
+Gökyüzü laciverte dönerken artıyor heyecan
+Bu coşkuyu durdurabilir mi sence herhangi bir zaman?
+Hadi takıl peşime, gecenin rengine boyanalım!
+
+Gecenin rengi sarmış dört bir yanı, yerinde duramıyor kimse!
+Bu yaz akşamının büyüsü bozulmaz, inan ki sesimize!
+Mavi, turuncu, mor, ne ararsan var bu coşkulu havada
+Gecenin rengi parlıyor, en güzel parti sokakta!
+Hadi salla başını, ritme bırak kendini tamamen!
+
+Müzik sesleri yükseliyor köşedeki açık kafeden
+Kimsenin gözü yok başka bir şeyde, vazgeçtik şüpheden
+Gözlerimiz parlıyor gecenin o canlı ışığında
+En güzel anılar yazılıyor bak bu yaz akşamında!
+
+Gökyüzü laciverte dönerken artıyor heyecan
+Bu coşkuyu durdurabilir mi sence herhangi bir zaman?
+Hadi takıl peşime, gecenin rengine boyanalım!
+
+Gecenin rengi sarmış dört bir yanı, yerinde duramıyor kimse!
+Bu yaz akşamının büyüsü bozulmaz, inan ki sesimize!
+Mavi, turuncu, mor, ne ararsan var bu coşkulu havada
+Gecenin rengi parlıyor, en güzel parti sokakta!
+Hadi salla başını, ritme bırak kendini tamamen!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 8 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>08</span>
+                    <div class="song-name">Yıldız Tozu</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Başımızı kaldırdık baktık yukarı, gökyüzü pırıl pırıl
+Bu gece ki mutluluğun tarifi yok, inanki cidden akıl almaz
+Yıldızlar dökülüyor sanki üzerimize teker teker
+Bu yaz akşamında kalplerimiz aynı rüzgârla eser!
+
+El uzatsak tutacağız sanki o parlak noktaları
+Bu coşku aydınlatıyor bütün karanlık yolları
+Hadi dileyelim dileği, gökyüzü şahidimiz bu gece!
+
+Yıldız tozu yağıyor üzerimize bu yaz akşamında!
+Böyle bir büyü var mıdır sence dünyanın başka bir anında?
+Parlıyor gözlerimiz, sönmez asla bu coşkulu ateş
+Yıldız tozu altında dans ediyoruz hepimiz eş!
+Hadi kaldır elleri göğe, ışıldasın bütün gece!
+
+Toplandık yine sahile, çatı katına ya da meydana
+Kimsenin borusu ötmüyor artık o eski rutine baksana
+Herkes kendi masalının kahramanı olmuş bu sahnede
+Yıldız tozu serpiştiriyor hayat en güzel bestede!
+
+El uzatsak tutacağız sanki o parlak noktaları
+Bu coşku aydınlatıyor bütün karanlık yolları
+Hadi dileyelim dileği, gökyüzü şahidimiz bu gece!
+
+Yıldız tozu yağıyor üzerimize bu yaz akşamında!
+Böyle bir büyü var mıdır sence dünyanın başka bir anında?
+Parlıyor gözlerimiz, sönmez asla bu coşkulu ateş
+Yıldız tozu altında dans ediyoruz hepimiz eş!
+Hadi kaldır elleri göğe, ışıldasın bütün gece!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 9 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>09</span>
+                    <div class="song-name">Dalgakıran</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Vuruyor dalgalar kayalara, sesleri yankılanıyor uzaktan
+Bu coşkuyu duymamak imkânsız artık bu mekândan
+Dalgakıranın üstündeyiz, rüzgâr saçlarımızı tarıyor
+Burada olan herkes sanki yeniden doğuyor!
+
+Köpükler uçuşuyor havaya, sular serpiyor yüzümüze
+Bu akşam neşe sığmıyor ki inan hiçbir sözümüze!
+Hadi yaslan arkaya, dalgalarla yarışsın sesimiz!
+
+Çarpıyor dalgalar kıyıya, yıkılıyor bütün duvarlar!
+Bu yaz akşamında coşkuyu kim tutabilir ki aralar?
+Dalgakıran şahidimiz, deniz ve bu sonsuz mavi
+Bu ritimle sallanıyor bütün sahilin engebeli!
+Hadi vur ayağını yere, dalgalar kadar güçlü ol!
+
+Işıklar vuruyor denize, yakamozlar parıl parıl yanıyor
+Gece ilerledikçe bu sahil daha da bir canlanıyor
+Kimse evine gitmek istemiyor bu efsane saatte
+Dalgakıran üstünde dans ediyoruz en yüksek tempoda!
+
+Köpükler uçuşuyor havaya, sular serpiyor yüzümüze
+Bu akşam neşe sığmıyor ki inan hiçbir sözümüze!
+Hadi yaslan arkaya, dalgalarla yarışsın sesimiz!
+
+Çarpıyor dalgalar kıyıya, yıkılıyor bütün duvarlar!
+Bu yaz akşamında coşkuyu kim tutabilir ki aralar?
+Dalgakıran şahidimiz, deniz ve bu sonsuz mavi
+Bu ritimle sallanıyor bütün sahilin engebeli!
+Hadi vur ayağını yere, dalgalar kadar güçlü ol!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 10 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>10</span>
+                    <div class="song-name">Sıcak Temas</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Hava zaten sıcak ama bu gece ortam bir başka
+Yürekler pırpır ediyor, yaklaştık yine bu aşka
+Göz göze gelince anladık, sözlere gerek yok artık
+Bu yaz akşamında kalplerimiz çoktan birbirine sardı!
+
+Yaklaşıyor mesafeler, nefesler birbirine karışıyor
+Bu sıcak temasla bütün tabular yavaşça yıkılıyor!
+Hadi tut ellerimden, bu heyecan hiç bitmesin!
+
+Sıcak temas sarıyor dört bir yanımızı bu gece!
+Bu coşkunun tarifi yazılamaz inan hiçbir dizeye!
+Gözler kalbin aynası, ritim vuruyor ta derinden
+Sıcak temas başladı, kimse vazgeçemez bu bütünden!
+Hadi sarıl sıkıca, bu yazın en sıcak anı bu!
+
+Yıldızlar şahitlik ediyor bu tatlı yakınlaşmaya
+Kimsenin niyeti yok bu gece evine geri dönmeye
+Ateşin harareti vuruyor yüzümüze hafiften hafif
+Bu sıcak temasla her anımız şimdi bambaşka bir keyif!
+
+Yaklaşıyor mesafeler, nefesler birbirine karışıyor
+Bu sıcak temasla bütün tabular yavaşça yıkılıyor!
+Hadi tut ellerimden, bu heyecan hiç bitmesin!
+
+Sıcak temas sarıyor dört bir yanımızı bu gece!
+Bu coşkunun tarifi yazılamaz inan hiçbir dizeye!
+Gözler kalbin aynası, ritim vuruyor ta derinden
+Sıcak temas başladı, kimse vazgeçemez bu bütünden!
+Hadi sarıl sıkıca, bu yazın en sıcak anı bu!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 11 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>11</span>
+                    <div class="song-name">Ay Işığı</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Söndü bütün sokak lambaları, tek efendi gökte ay
+Gümüş gibi parlıyor her yer, bu gece sanki bir olay
+Vuruyor ay ışığı denize, yol açmış gümüşten bir yol
+Hadi takıl peşime bu gece, neşe dolsun soluk soluk!
+
+Yıldızlar sönük kalır bu muazzam parlaklığın yanında
+Böyle bir huzur var mıdır acaba dünyanın başka katında?
+Hadi çıkalım sahile, ay ışığı rehberimiz olsun!
+
+Ay ışığı vuruyor üstümüze, parlıyor bütün gece!
+Bu yaz akşamının büyüsü çözülmez inan hiçbir dizeye!
+Gümüş rengi dalgalar, rüzgâr ve bu eşsiz melodi
+Ay ışığı altında dans etmek sanki hayatın kendisi!
+Hadi kaldır başını göğe, ışıldasın bütün kalpler!
+
+Glgeler uzuyor kumların üzerinde yavaş yavaş
+Bu gecenin güzelliğine bulunur mu sence bir eş?
+Herkes susmuş, sadece denizin ve müziğin sesi var
+Ay ışığı aydınlatıyor bütün saklı kalmış yollar!
+
+Yıldızlar sönük kalır bu muazzam parlaklığın yanında
+Böyle bir huzur var mıdır acaba dünyanın başka katında?
+Hadi çıkalım sahile, ay ışığı rehberimiz olsun!
+
+Ay ışığı vuruyor üstümüze, parlıyor bütün gece!
+Bu yaz akşamının büyüsü çözülmez inan hiçbir dizeye!
+Gümüş rengi dalgalar, rüzgâr ve bu eşsiz melodi
+Ay ışığı altında dans etmek sanki hayatın kendisi!
+Hadi kaldır başını göğe, ışıldasın bütün kalpler!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 12 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>12</span>
+                    <div class="song-name">Yazın Sesi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Kulaklarımızda hep aynı melodi, dillerde o güzel nakarat
+Bu yazın sesi yankılanıyor sokaklarda, durma biraz yaklaş!
+Radyolar son ses açık, arabalar geçiyor caddeden
+Bu şarkıyı duyan herkes vazgeçiyor bütün kederden!
+
+Yükseliyor sesler gökyüzüne doğru dalga dalga
+Böyle bir coşku bulunmaz inan ki dünyada başka!
+Hadi verelim sesimizi rüzgâra, duymayan kalmasın!
+
+Bu yazın sesi kulaklardan silinmez hiçbir zaman!
+Coşku tavan yapmış, yerinde duramıyor artık bu mekan!
+Dalgalar, rüzgâr ve şarkılar bir olmuş, çalıyor yeniden
+Yazın sesi sarmış dört bir yanımızı ta derinden!
+Hadi söyle sen de yüksek sesle, bu bizim ezgimiz!
+
+Her köşe başında çalıyor bu ritim, herkes aynı havada
+Yazın sesi mühür vurdu bu efsane hatıraya
+Yüzlerde gülümseme, ayaklarda o tatlı tempo
+Bu şarkı bitmesin istiyor herkes, en yüksek tempo!
+
+Yükseliyor sesler gökyüzüne doğru dalga dalga
+Böyle bir coşku bulunmaz inan ki dünyada başka!
+Hadi verelim sesimizi rüzgâra, duymayan kalmasın!
+
+Bu yazın sesi kulaklardan silinmez hiçbir zaman!
+Coşku tavan yapmış, yerinde duramıyor artık bu mekan!
+Dalgalar, rüzgâr ve şarkılar bir olmuş, çalıyor yeniden
+Yazın sesi sarmış dört bir yanımızı ta derinden!
+Hadi söyle sen de yüksek sesle, bu bizim ezgimiz!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 13 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>13</span>
+                    <div class="song-name">Son Veda Değil</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Yavaş yavaş sonuna geliyoruz sanki bu güzel günlerin
+Ama içimiz rahat, biliyoruz ki bitti denilen yerin
+Aslında başladığıdır her yeni ve tatlı hikâyenin
+Gözlerimizde o ışıltı, kalbimizde bu neşenin!
+
+Takvim yaprakları dönsün, ne önemi var ki zamanın?
+Bu hatıralar silinmez inan ki ruhundan insanın!
+Hadi sarıl sıkıca, bu bir veda değil asla!
+
+Bu son veda değil kanka, daha yeni başlıyoruz!
+Yaz biter mi sandın, biz kalbimizde saklıyoruz!
+Anılar canlı kalacak, şarkılar susmayacak dilimizde
+Son veda değil bu, yaz hep bizimle, kalbimizde!
+Hadi kaldır başını dik, daha çok şarkımız var!
+
+Sahildeki ateş küllense de içimizdeki kor hep aynı
+Bu dostluk, bu müzik, bu coşku dünyanın en güzel anı
+Giden yaz olsun, biz yine buradayız ilk günkü gibi
+Son veda değil bu, daha yeni yazılıyor hikâyenin dibi!
+
+Takvim yaprakları dönsün, ne önemi var ki zamanın?
+Bu hatıralar silinmez inan ki ruhundan insanın!
+Hadi sarıl sıkıca, bu bir veda değil asla!
+
+Bu son veda değil kanka, daha yeni başlıyoruz!
+Yaz biter mi sandın, biz kalbimizde saklıyoruz!
+Anılar canlı kalacak, şarkılar susmayacak dilimizde
+Son veda değil bu, yaz hep bizimle, kalbimizde!
+Hadi kaldır başını dik, daha çok şarkımız var!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 14 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>14</span>
+                    <div class="song-name">Sonsuz Yaz</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Geldik yolun sonuna ama coşku hâlâ ilk anki gibi taze
+Bu müzik susmaz, bu ritim inmez asla aşağıya vitese!
+Güneş batıyor diye üzülen var mı aramızda saksana?
+Bizim içimizdeki güneş hiç batmaz, inan ki baksana!
+
+Tüm yaz buradaydık, şimdi bu son şarkı patlasın!
+Bütün sesler coşkuyla gökyüzüne doğru atlasın!
+Hadi verelim son nefesi, bu sonsuz bir yolculuk!
+
+Bu bir sonsuz yaz, kalbimizde hiç sönmeyen ateş!
+Dünyanın en güzel ritmiyle atıyor şimdi her eş!
+Dalgalar, sahil, müzik ve biz, bu masal hiç bitmeyecek
+Sonsuz yaz başladı, bu coşku sonsuza dek sürecek!
+Hadi bas pedala sonuna kadar, bu bizim finalimiz!
+
+Bitti sandılar ama bu daha ilk perdeydi...
+Akdeniz ateşi sardı bütün dört bir yandaki sehri...
+Hazır mısın? Tekrar vuruyoruz en tepeden!
+1, 2, 3, 4!
+
+Bu bir sonsuz yaz, kalbimizde hiç sönmeyen ateş!
+Dünyanın en güzel ritmiyle atıyor şimdi her eş!
+Dalgalar, sahil, müzik ve biz, bu masal hiç bitmeyecek
+Sonsuz yaz başladı, bu coşku sonsuza dek sürecek!
+Hadi bas pedala sonuna kadar, bu bizim finalimiz!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Hepsini kapat
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Tıklanan kapalıysa aç
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
