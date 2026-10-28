@@ -9,6 +9,23 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
         .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        
+        /* Üst ve Alt Sanatçı Portalı / Sosyal Medya Bandı */
+        .portal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; font-size: 11px; font-weight: 700; color: #fff; padding: 0 2px; width: 100%; }
+        .portal-left { display: flex; align-items: center; gap: 5px; letter-spacing: 0.5px; white-space: nowrap; }
+        
+        .social-icons { display: flex; align-items: center; gap: 8px; }
+        .social-icons a { font-size: 14px; transition: 0.3s; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+        .social-icons a:hover { transform: scale(1.15); }
+
+        /* Orijinal Sosyal Medya Marka Renkleri */
+        .social-icons .fa-instagram { color: #e1306c; }
+        .social-icons .x-icon { fill: #ffffff; width: 13px; height: 13px; }
+        .social-icons .fa-youtube { color: #ff0000; }
+        .social-icons .fa-facebook-f { color: #1877f2; }
+        .social-icons .fa-tiktok { color: #00f2fe; }
+        .social-icons .fa-spotify { color: #1db954; }
+
         nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
         nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
         nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
@@ -34,17 +51,35 @@
         .accordion-item.active .accordion-header i { transform: rotate(180deg); }
         .accordion-item.active { border-color: #d4af37; }
 
-        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .footer-social { display: flex; justify-content: center; }
         .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
     <div class="top-content">
+        <!-- Üst Portal ve Orijinal Renkli Sosyal Medya Alanı -->
+        <div class="portal-header">
+            <div class="portal-left">
+                <span>🇹🇷</span> RESMÎ SANATÇI PORTALI
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank">
+                    <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+
         <nav>
             <a href="index.html">Anasayfa</a>
             <a href="hakkinda.html">Hakkımda</a>
-            <a href="albumler1.html" class="active">Albümler</a>
+            <a href="albumler.html" class="active">Albümler</a>
             <a href="iletisim.html">İletişim</a>
             <a href="sosyal-medya.html">Sosyal Medya</a>
         </nav>
@@ -93,7 +128,6 @@ Bu ritmin dünyada var mı sence bir eşi?
 Çalıyor şarkılar sokakta, dillerde yine bizim adımız
 Yaz akşamı bu, en güzel zamanımız!
 Hadi yak ateşi, durmasın bu ayaklar!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -135,7 +169,6 @@ Bu yaz akşamı kalplerimiz aynı ritimde atıyor!
 Sahil yolu, rüzgâr ve biz, başka kimse yok ki lazım
 En güzel şarkımız çalıyor, bu bizim yazımız!
 Hadi bas pedala, durmasın bu yolculuk!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -177,7 +210,6 @@ Serinletiyor içimizi, ne güzel esiyor rüzgâr derinden!
 Sırılsıklam olsa da kalpler, neşe dolu bu akşam
 Yaz yağmuru altında dans ediyor bütün bu mekan!
 Hadi salla başını, ıslansın ellerimiz!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -219,7 +251,6 @@ Bu yaz akşamı değişmez ki kimsenin biçimi ne!
 Kumlar üzerinde dans, ateşin sıcaklığı yüzümüzde
 Kumsal ritimleri çaldıkça neşe tavan gökyüzünde!
 Hadi salla kollarını, kumsalda sabaha kadar!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -261,7 +292,6 @@ Bu yaz akşamı bütün sokak aşka uyanıyor!
 Ne bir tasla kalmış dert, ne de geride kalan hüzün
 Meltem esintisi vurunca gülüyor her yüzün!
 Hadi al eline bardağı, rüzgâra ver yönünü!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -303,7 +333,6 @@ Bu yaz akşamı sardı yine bütün duygularımızı!
 Yürüyoruz el ele, gece uzun, sokaklar bizim
 Sokak lambası altında saklı en güzelimiz, sözümüz!
 Hadi devam edelim yola, daha çok yolumuz var!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -345,7 +374,6 @@ Bu yaz akşamının büyüsü bozulmaz, inan ki sesimize!
 Mavi, turuncu, mor, ne ararsan var bu coşkulu havada
 Gecenin rengi parlıyor, en güzel parti sokakta!
 Hadi salla başını, ritme bırak kendini tamamen!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -387,7 +415,6 @@ Böyle bir büyü var mıdır sence dünyanın başka bir anında?
 Parlıyor gözlerimiz, sönmez asla bu coşkulu ateş
 Yıldız tozu altında dans ediyoruz hepimiz eş!
 Hadi kaldır elleri göğe, ışıldasın bütün gece!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -429,7 +456,6 @@ Bu yaz akşamında coşkuyu kim tutabilir ki aralar?
 Dalgakıran şahidimiz, deniz ve bu sonsuz mavi
 Bu ritimle sallanıyor bütün sahilin engebeli!
 Hadi vur ayağını yere, dalgalar kadar güçlü ol!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -471,7 +497,6 @@ Bu coşkunun tarifi yazılamaz inan hiçbir dizeye!
 Gözler kalbin aynası, ritim vuruyor ta derinden
 Sıcak temas başladı, kimse vazgeçemez bu bütünden!
 Hadi sarıl sıkıca, bu yazın en sıcak anı bu!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -513,7 +538,6 @@ Bu yaz akşamının büyüsü çözülmez inan hiçbir dizeye!
 Gümüş rengi dalgalar, rüzgâr ve bu eşsiz melodi
 Ay ışığı altında dans etmek sanki hayatın kendisi!
 Hadi kaldır başını göğe, ışıldasın bütün kalpler!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -528,7 +552,7 @@ Hadi kaldır başını göğe, ışıldasın bütün kalpler!
                 <div class="accordion-content">
 Kulaklarımızda hep aynı melodi, dillerde o güzel nakarat
 Bu yazın sesi yankılanıyor sokaklarda, durma biraz yaklaş!
-Radyolar son ses açık, arabalar geçiyor caddeden
+Radyorlar son ses açık, arabalar geçiyor caddeden
 Bu şarkıyı duyan herkes vazgeçiyor bütün kederden!
 
 Yükseliyor sesler gökyüzüne doğru dalga dalga
@@ -555,7 +579,6 @@ Coşku tavan yapmış, yerinde duramıyor artık bu mekan!
 Dalgalar, rüzgâr ve şarkılar bir olmuş, çalıyor yeniden
 Yazın sesi sarmış dört bir yanımızı ta derinden!
 Hadi söyle sen de yüksek sesle, bu bizim ezgimiz!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -597,7 +620,6 @@ Yaz biter mi sandın, biz kalbimizde saklıyoruz!
 Anılar canlı kalacak, şarkılar susmayacak dilimizde
 Son veda değil bu, yaz hep bizimle, kalbimizde!
 Hadi kaldır başını dik, daha çok şarkımız var!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -635,7 +657,6 @@ Dünyanın en güzel ritmiyle atıyor şimdi her eş!
 Dalgalar, sahil, müzik ve biz, bu masal hiç bitmeyecek
 Sonsuz yaz başladı, bu coşku sonsuza dek sürecek!
 Hadi bas pedala sonuna kadar, bu bizim finalimiz!
-
                     <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
                 </div>
             </div>
@@ -644,6 +665,17 @@ Hadi bas pedala sonuna kadar, bu bizim finalimiz!
     </div>
 
     <footer>
+        <!-- Alt Sosyal Medya İkonları -->
+        <div class="footer-social social-icons">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank">
+                <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
         <div class="footer-text">
             © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
             Zaman Perdesi Yapım Prodüksiyon
@@ -655,12 +687,10 @@ Hadi bas pedala sonuna kadar, bu bizim finalimiz!
             const item = header.parentElement;
             const isActive = item.classList.contains('active');
             
-            // Hepsini kapat
             document.querySelectorAll('.accordion-item').forEach(i => {
                 i.classList.remove('active');
             });
             
-            // Tıklanan kapalıysa aç
             if (!isActive) {
                 item.classList.add('active');
             }
