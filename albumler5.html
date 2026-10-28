@@ -1,1 +1,678 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albüm 5 | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
+        .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
+        nav a:hover { border-color: #d4af37; color: #d4af37; }
+        
+        .album-header-box { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px 20px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+        .album-title { color: #d4af37; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; text-transform: uppercase; font-weight: bold; }
+        .album-info { color: #888; font-size: 12px; letter-spacing: 1px; }
 
+        .accordion-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; text-align: left; }
+        .accordion-item { background: #141414; border: 1px solid #222; border-radius: 12px; overflow: hidden; transition: 0.3s; }
+        .accordion-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .accordion-header span { color: #d4af37; font-weight: bold; font-size: 14px; }
+        .accordion-header .song-name { color: #fff; font-size: 14px; font-weight: 600; text-transform: uppercase; flex-grow: 1; margin-left: 15px; }
+        .accordion-header i { color: #d4af37; font-size: 12px; transition: transform 0.3s; }
+        
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 20px; background: #111; color: #ccc; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+        
+        .credits { margin-top: 15px; padding-top: 12px; border-top: 1px dashed #333; color: #d4af37; font-size: 12px; font-weight: 600; }
+
+        /* Açıldığında */
+        .accordion-item.active .accordion-content { max-height: 3000px; padding: 20px; }
+        .accordion-item.active .accordion-header i { transform: rotate(180deg); }
+        .accordion-item.active { border-color: #d4af37; }
+
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html" class="active">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+
+        <div class="album-header-box">
+            <div class="album-title">5. ALBÜM</div>
+            <div class="album-info">Zaman Perdesi Music • 14 Şarkı</div>
+        </div>
+
+        <div class="accordion-container">
+            
+            <!-- Şarkı 1 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>01</span>
+                    <div class="song-name">Aşkın İlk Hali</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Her şey bir nefesle başladı; önce gözlerinde kayboldum, sonra sesinde...
+Gözlerinde buldum kendimi bir akşamüstü
+Sanki zaman durdu, dünya sustu
+İlk bakışınla sardı beni bir tutku
+Kalbimin rotası sana doğru uçtu.
+
+Zaman durdu sanki ama şimdi tam sırası
+Hızlı atıyor kalbim, bu işin yok şakası
+Hadi gel, durma öyle, kapıl bu akıntıya!
+
+Şimdi aşkın ilk halindeyiz biz
+Silinmez kalbimize atılan o iz
+Ne ayrılık korkusu, ne de kederli bir diz
+Biz bu sevda yolunda, en güzel ikimiz!
+Hadi yak ateşi, ritmi hisset derinden
+Bu gece kimse tutamaz bizi yerinden!
+
+Sözlerinde buldum ben de huzuru
+Saflıkla ördüm içimdeki o gururu
+Ellerin değince unuttum her kusuru
+Bir ömür seninle yazılacak bu kurulu.
+
+Zaman durdu sanki ama şimdi tam sırası
+Hızlı atıyor kalbim, bu işin yok şakası
+Hadi gel, durma öyle, kapıl bu akıntıya!
+
+Şimdi aşkın ilk halindeyiz biz
+Silinmez kalbimize atılan o iz
+Ne ayrılık korkusu, ne de kederli bir diz
+Biz bu sevda yolunda, en güzel ikimiz!
+Hadi yak ateşi, ritmi hisset derinden
+Bu gece kimse tutamaz bizi yerinden!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>02</span>
+                    <div class="song-name">Kırmızı Çizgi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Yine aynı sokak, yine aynı heves
+Peşindeyim her an, sanki tek bir nefes
+Göz göze gelince duruyor zaman
+Bu nasıl bir oyun, yaktın baştan yaman!
+
+Aklımı başımdan alan o gülüşün var ya
+Sanki bir işaret, dönülmez yola
+Hadi zorlama artık, boşuna inat!
+
+Çekildim bir kenara, bu benim sonum mu?
+Seninle bu yollar çıkmaz sokak mı oldu?
+Çizdin o çizgiyi, geçilmez sandın ama
+Aşkın kuralları bozulur bu akşam!
+Hadi gel, korkma hiç, bas gaza derinden
+Sallansın bu dünya, yıkılsın yerinden!
+
+Kolay mı sanırsın seni silip atmak
+Ateşle oynamak, sonra cana kıymak
+Adım adım düştüm bu tatlı belaya
+Göz kırpar neşe dolu yarınlara!
+
+Aklımı başımdan alan o gülüşün var ya
+Sanki bir işaret, dönülmez yola
+Hadi zorlama artık, boşuna inat!
+
+Çekildim bir kenara, bu benim sonum mu?
+Seninle bu yollar çıkmaz sokak mı oldu?
+Çizdin o çizgiyi, geçilmez sandın ama
+Aşkın kuralları bozulur bu akşam!
+Hadi gel, korkma hiç, bas gaza derinden
+Sallansın bu dünya, yıkılsın yerinden!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>03</span>
+                    <div class="song-name">Göz Hapsi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Kalabalık ortada, gözlerimin odağında sen
+Bir adım atsan bile, dünya dönüyor yeniden
+Saklanacak yer yok, yakalandın bu kez kesin
+Rüzgar gibi estin, aklımı başımdan çeldin!
+
+Kaçışın yok artık, radarıma girdin bir kere
+Bu heyecan yeter, başka şey istemem nereye?
+Hadi durma, ver bir işaret!
+
+Aldın beni göz hapsine, bırakmıyorsun peşimi
+Bu nasıl bir büyü, sardı bütün neşemi!
+İtiraf et artık, sende de var o kıvılcım
+Seninle bu hayat, işte şimdi tamam marjım!
+
+Bir bakışın yetti, bütün ezberim bozuldu
+Gönlümün sarayı sana kilitli kuruldu
+Aramızda gizli bir anlaşma var sanki
+Kim bilir belki de en güzel bu anki!
+
+Kaçışın yok artık, radarıma girdin bir kere
+Bu heyecan yeter, başka şey istemem nereye?
+Hadi durma, ver bir işaret!
+
+Aldın beni göz hapsine, bırakmıyorsun peşimi
+Bu nasıl bir büyü, sardı bütün neşemi!
+İtiraf et artık, sende de var o kıvılcım
+Seninle bu hayat, işte şimdi tamam marjım!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>04</span>
+                    <div class="song-name">Gece Vurgunu</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Saatler gece yarısı, sokaklar bi' başka sakin
+Sen çıkıp gelince dağılır bütün bu akis
+Bir gülüşle başladı bu tatlı macera
+Sanki ışık yandı en karanlık gecede bana!
+
+Durduramaz kimse artık bu deli dalgayı
+Aldı aklımı başımdan, sildi bütün kaygıyı
+Hadi yaklaş biraz daha, zaman bu zaman!
+
+Bu bir gece vurgunu, kalbin orta yerinde!
+Kapıldım o rüzgara, esiyor en derinde
+Ne kural tanır bu sevda, ne de eski korkuyu
+Seninle buldum ben o en güzel duyguyu!
+Hadi yak ateşi, sabaha kadar sürsün bu disko!
+
+Hesapsızkitapsız bir oyunun içindeyiz
+Bile bile lades olduk, en güzel ikimizsiz
+Yıldızlar şahit olsun bu tatlı telaşa
+Böyle bir coşku gelmez bir daha başa!
+
+Durdurdamaz kimse artık bu deli dalgayı
+Aldı aklımı başımdan, sildi bütün kaygıyı
+Hadi yaklaş biraz daha, zaman bu zaman!
+
+Bu bir gece vurgunu, kalbin orta yerinde!
+Kapıldım o rüzgara, esiyor en derinde
+Ne kural tanır bu sevda, ne de eski korkuyu
+Seninle buldum ben o en güzel duyguyu!
+Hadi yak ateşi, sabaha kadar sürsün bu disko!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 5 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>05</span>
+                    <div class="song-name">Alev Alev</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Ortam ısındı birden, gözlerimin bebeğinde sen
+Bu nasıl bir kıvılcım, yakıyorsun yeniden
+Adım attığın yerler sanki bahar yaz gibi
+Bu deli rüzgarın önünde durulmaz ki!
+
+Kilitlendi bütün yollar, çıkış yok bu kez bana
+Bırak ateşi salsın kendini dört bir yana
+Hadi durma, sen de katıl bu ritme!
+
+Yanıyor etraf, her yer alev alev!
+Bu ne harika duygu, bu nasıl bir zevkalev?
+Söndüremez kimse artık içimdeki bu koru
+Seninle başlamış bu hayatın en güzel yolu!
+Hadi coşsun bu gece, ses verelim sesimize!
+
+Hesapsız bir yangının ortasında kaldık biz
+Ne bir korku var şimdi, ne de arkada bir iz
+Göz göze gelince dünya sanki duruyor
+Bu harika enerji bizi hep vuruyor!
+
+Kilitlendi bütün yollar, çıkış yok bu kez bana
+Bırak ateşi salsın kendini dört bir yana
+Hadi durma, sen de katıl bu ritme!
+
+Yanıyor etraf, her yer alev alev!
+Bu ne harika duygu, bu nasıl bir zevkalev?
+Söndüremez kimse artık içimdeki bu koru
+Seninle başlamış bu hayatın en güzel yolu!
+Hadi coşsun bu gece, ses verelim sesimize!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 6 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>06</span>
+                    <div class="song-name">Ritim Tut</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Müzik başladı birden, ayaklar yerden kesildi
+Bütün o yorgunluklar bir anda silindi gitti
+Karşımda durmuş öyle, gülümser tatlı tatlı
+Bu akşamki eğlence her şeyden çok farklı!
+
+Bırak kendini akışa, düşünme yarını hiç
+Bu ritim çağırıyor seni, duyuyor musun iç?
+Hadi uzat ellerini, şimdi tam zamanı!
+
+Hadi ritim tut, ayak uydur bu sese!
+Bırak aksın neşe dolu bu nefes içimize
+Ne dert kalır ne tazar, ne de eski bir keder
+Bu gece bu dans bize her şeye bedel!
+Hadi salla dünyayı, durmasın bu ayaklar!
+
+Göz göze gelince sanki bütün dünya durur
+Bu coşkulu melodi tam kalbimizden vurur
+Kim takar anı, geçmişi, geleceği şimdi?
+Mutluluk dediğin bu, tam yerinde bitti!
+
+Bırak kendini akışa, düşünme yarını hiç
+Bu ritim çağırıyor seni, duyuyor musun iç?
+Hadi uzat ellerini, şimdi tam zamanı!
+
+Hadi ritim tut, ayak uydur bu sese!
+Bırak aksın neşe dolu bu nefes içimize
+Ne dert kalır ne tazar, ne de eski bir keder
+Bu gece bu dans bize her şeye bedel!
+Hadi salla dünyayı, durmasın bu ayaklar!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 7 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>07</span>
+                    <div class="song-name">Çekim Kuvveti</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Ne kadar kaçsam da sanki bir mıknatıs gibi
+Çekiyorsun beni kendine, bu işin yok tarifi
+Adım attığın her yön, rotamı sana çevirir
+Bu görünmez bağlar bizi birbirine mühürler!
+
+Koyduk mu mesafeleri bir kenara tamamen
+Bu çekim gücü başka, kaçış yok inattan ben
+Hadi direnme artık, bırak bu akışa kendini!
+
+Var bu işte gizli bir çekim kuvveti!
+Çeviriyor başımı, sildi bütün ezberi
+Ne dikey kalır ne yatay, dengemiz altüst oldu
+Seninle bu macera en güzel yere kondu!
+Hadi sarıl sıkıca, düşmeyelim boşluğa!
+
+Göz göze gelince yer çekimi falan kalmaz
+Bu hızlı tempoya kimsecikler ayak uyduramaz
+Gülüşün yetiyor beni benden almaya
+Hazırım seninle en çılgın yola çıkmaya!
+
+Koyduk mu mesafeleri bir kenara tamamen
+Bu çekim gücü başka, kaçış yok inattan ben
+Hadi direnme artık, bırak bu akışa kendini!
+
+Var bu işte gizli bir çekim kuvveti!
+Çeviriyor başımı, sildi bütün ezberi
+Ne dikey kalır ne yatay, dengemiz altüst oldu
+Seninle bu macera en güzel yere kondu!
+Hadi sarıl sıkıca, düşmeyelim boşluğa!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 8 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>08</span>
+                    <div class="song-name">Yasak Bölge</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Girişler yasak diyorlar bu kalbin kapısına
+Cesaret eden yanar, akıl erer mi yapısına?
+Ama ben yasakları delmek için varım bugün
+Sensiz geçen her saniye bana bir büyük hüzün!
+
+Uyarı levhaları asılmış dört bir yana
+Ama bu deli yürek kulak asmaz ki asla
+Hadi bas gaza, geçelim o çizgiyi!
+
+Burası yasak bölge, giren geri çıkamaz!
+Bu ateşli sevdaya kimse engel olamaz
+Duvarları yıkıp geçtim, mühürleri söktüm ben
+Seninle এই tehlike bana en güzel gelen!
+Hadi yak ateşi, korkmuyoruz kuraldan!
+
+Risk almadan kazanılmaz en büyük ödüller
+Ardımızdan konuşsun bırak bütün o eller
+Göz göze gelince biter bütün o yasaklar
+Bizimle başlar ancak en güzel maceralar!
+
+Uyarı levhaları asılmış dört bir yana
+Ama bu deli yürek kulak asmaz ki asla
+Hadi bas gaza, geçelim o çizgiyi!
+
+Burası yasak bölge, giren geri çıkamaz!
+Bu ateşli sevdaya kimse engel olamaz
+Duvarları yıkıp geçtim, mühürleri söktüm ben
+Seninle bu tehlike bana en güzel gelen!
+Hadi yak ateşi, korkmuyoruz kuraldan!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 9 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>09</span>
+                    <div class="song-name">Frekans</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Aynı dalga boyundayız, söze gerek kalmıyor
+Bakışların içimden bir saniye silinmiyor
+Sanki gizli bir telden çalıyor bütün bu şarkı
+Seninle yakaladım o en güzel ortak farkı!
+
+Ayarladık kalpleri aynı ortak yayına
+Kimse engel olamaz bu deli coşkuya
+Hadi aç sesini, duysun bütün dünya!
+
+Tutturduk aynı frekansı, akıyoruz zamandan!
+Bu nasıl bir uyum, kaçış yok bu heyecandan
+Ne bozulur bu ayar, ne de sinyalimiz düşer
+Seninle bu melodi her anımıza değer!
+Hadi salla dünyayı, ritmi hiç durdurma!
+
+Rüzgar bile yetişemez bizim bu hızımıza
+Böyle bir coşku yazılmaz hiç kimsenin yazısına
+Göz göze gelince sesimiz birleşir birden
+Bu tatlı yankı gitmez artık bu kalpten!
+
+Ayarladık kalpleri aynı ortak yayına
+Kimse engel olamaz bu deli coşkuya
+Hadi aç sesini, duysun bütün dünya!
+
+Tutturduk aynı frekansı, akıyoruz zamandan!
+Bu nasıl bir uyum, kaçış yok bu heyecandan
+Ne bozulur bu ayar, ne de sinyalimiz düşer
+Seninle bu melodi her anımıza değer!
+Hadi salla dünyayı, ritmi hiç durdurma!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 10 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>10</span>
+                    <div class="song-name">Hızlı Karar</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Düşünmeye vaktim yok, gözlerin aklımı aldı
+Sanki bütün ihtimaller bir anda rafa kalktı
+Geldik o eşiğe, şimdi bir hamle yapmak şart
+Bu heyecanla yaşanmaz inan başka bir hayat!
+
+Saniyeler sayıyor, durduramaz kimse bizi
+Verdim gitti kalbimin en orta yerindeki izi
+Hadi arkana bakma, bas gaza şimdi!
+
+Bu çok hızlı bir karar, pişmanlık yok sonuna!
+Kapıldım bu akıntıya, koydum başımı yola
+Ne durmaya yer var şimdi, ne de geri dönmeye
+Seninle bu macera değer her bir saniyeye!
+Hadi yak ateşi, son sürat devam edelim!
+
+Hesap kitap yapmadım, hissettim ve atladım
+Seninle bu yollarda bütün engelleri katladım
+Göz göze gelince anladım işin aslını
+Böyle bir coşku yıkar bilirsin kuralını!
+
+Saniyeler sayıyor, durduramaz kimse bizi
+Verdim gitti kalbimin en orta yerindeki izi
+Hadi arkana bakma, bas gaza şimdi!
+
+Bu çok hızlı bir karar, pişmanlık yok sonuna!
+Kapıldım bu akıntıya, koydum başımı yola
+Ne durmaya yer var şimdi, ne de geri dönmeye
+Seninle bu macera değer her bir saniyeye!
+Hadi yak ateşi, son sürat devam edelim!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 11 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>11</span>
+                    <div class="song-name">Göz Göre Göre</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Bile bile düştüm ben bu tatlı tuzağa
+Sanki adım adım çektin beni uzağa
+Göz göre göre yandı bu deli gönül
+Seninle her anımız bir ömürden uzun bil!
+
+Gördüm o ateşi ama kaçmadım hiç bir an
+Bu nasıl bir büyü sardı dört bir yanımı yaman
+Hadi durma öyle, sen de kapıl bu sele!
+
+Göz göre göre düştüm senin o ağına!
+Kim takar uyarırı, kim bakar dağına
+Ne pişmanlık var şimdi, ne de geri dönüş yol
+Seninle bu macera ne kadar güzel bol!
+Hadi salla dünyayı, durmasın bu ayaklar!
+
+Göz göze gelince biter bütün o bahaneler
+Ardımızdan konuşsun bırak bütün o eller
+Bile bile lades olduk bu güzel oyuna
+Atalım kendimizi coşku dolu dalgaya!
+
+Gördüm o ateşi ama kaçmadım hiç bir an
+Bu nasıl bir büyü sardı dört bir yanımı yaman
+Hadi durma öyle, sen de kapıl bu sele!
+
+Göz göre göre düştüm senin o ağına!
+Kim takar uyarırı, kim bakar dağına
+Ne pişmanlık var şimdi, ne de geri dönüş yol
+Seninle bu macera ne kadar güzel bol!
+Hadi salla dünyayı, durmasın bu ayaklar!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 12 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>12</span>
+                    <div class="song-name">Sahne Bizim</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Bütün ışıklar üzerimizde, perdeler açıldı
+Bu akşam bu şehirde başka bir büyü saçıldı
+Adım attığımız an durdu bütün zamanlar
+Bizimle başlar şimdi en güzel heyecanlar!
+
+Gözler üzerimizde, merakla bakıyor herkes
+Bu coşkulu ritimle şimdi alın derin bir nefes
+Hadi yerinizi alın, başlıyor büyük şov!
+
+Artık sahne bizim, alkışlar bizim için!
+Sallansın bütün salon, coşsun için için
+Ne durmaya yer var şimdi, ne de arkaya bakmaya
+Seninle bu gecede doymayacağız oynamaya!
+Hadi yak ateşi, göster gününü herkese!
+
+Ritimler yükseliyor, ayaklar yerde durmaz
+Bu tempoya inanın kimsecikler uyulamaz
+Göz göze gelince anlar herkes bu oyunu
+Biz yazarız bu gecenin en muhteşem sonunu!
+
+Gözler üzerimizde, merakla bakıyor herkes
+Bu coşkulu ritimle şimdi alın derin bir nefes
+Hadi yerinizi alın, başlıyor büyük şov!
+
+Artık sahne bizim, alkışlar bizim için!
+Sallansın bütün salon, coşsun için için
+Ne durmaya yer var bizim şimdi, ne de arkaya bakmaya
+Seninle bu gecede doymayacağız oynamaya!
+Hadi yak ateşi, göster gününü herkese!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 13 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>13</span>
+                    <div class="song-name">Son Ses</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Aç radyoyu, aç müziği, duysun bütün mahalle!
+Bu coşku sığmaz artık ne bir kaba ne şekle
+Göz göze geldik yine, tempo tavan yaptı bak
+Bu akşam bu sokakta durmak bize çok yasak!
+
+Çevir sonuna kadar, patlasın bütün kolonlar
+Arkasından bakmasın asla geride kalanlar
+Hadi coşsun yer yerinden, ses verelim sesimize!
+
+Çalıyor şarkımız şimdi son ses!
+Yükseliyor gökyüzüne coşkulu bir nefes
+Ne dert kalır ne keder, ne de eski bir tasa
+Seninle bu eğlence yakışır en çok bize yasa!
+Hadi salla dünyayı, durmasın bu ayaklar!
+
+Ritimler baştan yazar bütün bu eski günü
+Kaçış yok bu coşkudan, gördük en güzel yönü
+Göz göze gelince anlar herkes bu frekansı
+Biz kurduk bu gecenin en eğlenceli çarkını!
+
+Çevir sonuna kadar, patlasın bütün kolonlar
+Arkasından bakmasın asla geride kalanlar
+Hadi coşsun yer yerinden, ses verelim sesimize!
+
+Çalıyor şarkımız şimdi son ses!
+Yükseliyor gökyüzüne coşkulu bir nefes
+Ne dert kalır ne keder, ne de eski bir tasa
+Seninle bu eğlence yakışır en çok bize yasa!
+Hadi salla dünyayı, durmasın bu ayaklar!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 14 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>14</span>
+                    <div class="song-name">Kalbin İmzası</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Yazdık en güzel hikayeyi baştan sona kadar
+Silinmez artık kalbimizden geçen o anlar
+Atılan her adımda yankılanır adımız
+Bu bizim zaferimiz, en parlak yanımız!
+
+Atıldı mühürler, artık geri dönüş yok
+Bu büyük coşkuya dünyada sığan yer çok
+Hadi vur damgayı, imzanı at kalbimin orta yerine!
+
+İşte bu bizim eserimiz, kalbin imzası!
+Yankılansın dört bir yana bu tatlı sevdanın sesi
+Ne kural tanır bu coşku, ne de eski bir yasa
+Seninle yazdık bu destanı en başından masaya!
+Hadi salla dünyayı, bu albüm bizim imzamız!
+
+Ritimler susmasın, sabaha kadar sürsün bu şölen
+Unutulmaz bu gece, adımız dillerde gezen
+Göz göze gelince anladı herkes bu gerçeği
+Biz yazdık bu albümle hayatın en güzel rengini!
+
+Atıldı mühürler, artık geri dönüş yok
+Bu büyük coşkuya dünyada sığan yer çok
+Hadi vur damgayı, imzanı at kalbimin orta yerine!
+
+İşte bu bizim eserimiz, kalbin imzası!
+Yankılansın dört bir yana bu tatlı sevdanın sesi
+Ne kural tanır bu coşku, ne de eski bir yasa
+Seninle yazdık bu destanı en başından masaya!
+Hadi salla dünyayı, bu albüm bizim imzamız!
+
+                    <div class="credits">Söz Yazarı: Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Hepsini kapat
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Tıklanan kapalıysa aç
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
