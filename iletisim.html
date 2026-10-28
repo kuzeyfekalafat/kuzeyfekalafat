@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; }
+        
+        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        
+        h1 { color: #d4af37; font-size: 26px; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; }
+        .subtitle { color: #888; font-size: 13px; margin-bottom: 25px; }
+        
+        .main-box { max-width: 450px; margin: 0 auto 25px auto; background: #141414; border: 1px solid #222; border-radius: 16px; padding: 20px; text-align: left; }
+        .box-title { color: #d4af37; font-size: 14px; font-weight: bold; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase; }
+        
+        .link-list { display: flex; flex-direction: column; gap: 10px; }
+        .link-card { display: flex; align-items: center; background: #0d0d0d; border: 1px solid #262626; border-radius: 10px; padding: 12px 15px; text-decoration: none; color: #fff; }
+        .link-card:hover { border-color: #d4af37; }
+        .link-icon { color: #d4af37; font-size: 18px; width: 35px; text-align: center; margin-right: 10px; }
+        .link-label { font-size: 10px; color: #777; text-transform: uppercase; letter-spacing: 1px; }
+        .link-val { font-size: 13px; color: #ddd; font-weight: 500; word-break: break-all; }
+
+        /* Form Styling */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 11px; color: #888; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px; }
+        .form-control { width: 100%; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; padding: 12px; color: #fff; font-size: 13px; outline: none; }
+        .form-control:focus { border-color: #d4af37; }
+        textarea.form-control { resize: vertical; min-height: 90px; }
+        .btn-submit { width: 100%; background: linear-gradient(180deg, #d4af37 0%, #aa820a 100%); color: #000; border: none; border-radius: 8px; padding: 14px; font-weight: bold; font-size: 13px; letter-spacing: 1px; cursor: pointer; text-transform: uppercase; margin-top: 10px; }
+
+        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; }
+        .footer-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+        .footer-icons a { color: #888; font-size: 16px; text-decoration: none; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="portal-title">RESMÎ SANATÇI PORTALI</div>
+
+    <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="hakkinda.html">Hakkımda</a>
+        <a href="albumler1.html">Albümler</a>
+        <a href="iletisim.html" class="active">İletişim</a>
+        <a href="sosyal-medya.html">Sosyal Medya</a>
+    </nav>
+
+    <h1>İLETİŞİM</h1>
+    <div class="subtitle">Bize Ulaşın</div>
+
+    <!-- Temas Kanalları -->
+    <div class="main-box">
+        <div class="box-title">RESMÎ TEMAS KANALLARI</div>
+        <div class="link-list">
+            <a href="mailto:kuzeyfe198634@gmail.com" class="link-card">
+                <i class="fas fa-envelope link-icon"></i>
+                <div>
+                    <div class="link-label">RESMÎ E-POSTA</div>
+                    <div class="link-val">kuzeyfe198634@gmail.com</div>
+                </div>
+            </a>
+            <a href="https://kuzeyfekalafat.com.tr" class="link-card">
+                <i class="fas fa-globe link-icon"></i>
+                <div>
+                    <div class="link-label">RESMÎ SANATÇI PORTALI</div>
+                    <div class="link-val">kuzeyfekalafat.com.tr</div>
+                </div>
+            </a>
+            <a href="https://zamanperdesi.com.tr" class="link-card">
+                <i class="fas fa-globe link-icon"></i>
+                <div>
+                    <div class="link-label">ANA MARKA PORTALI</div>
+                    <div class="link-val">zamanperdesi.com.tr</div>
+                </div>
+            </a>
+            <a href="https://zamanperdesifilm.com.tr" class="link-card">
+                <i class="fas fa-film link-icon"></i>
+                <div>
+                    <div class="link-label">SİNEMA & FİLM PORTALI</div>
+                    <div class="link-val">zamanperdesifilm.com.tr</div>
+                </div>
+            </a>
+            <a href="https://zamanperdesimusic.com.tr" class="link-card">
+                <i class="fas fa-music link-icon"></i>
+                <div>
+                    <div class="link-label">MÜZİK PLATFORMU</div>
+                    <div class="link-val">zamanperdesimusic.com.tr</div>
+                </div>
+            </a>
+            <a href="https://zpmedya.com.tr" class="link-card">
+                <i class="fas fa-hashtag link-icon"></i>
+                <div>
+                    <div class="link-label">SOSYAL MEDYA AĞI</div>
+                    <div class="link-val">zpmedya.com.tr</div>
+                </div>
+            </a>
+            <a href="https://filmsehri.com.tr" class="link-card">
+                <i class="fas fa-play-circle link-icon"></i>
+                <div>
+                    <div class="link-label">SİNEMA & AKIŞ PORTALI</div>
+                    <div class="link-val">filmsehri.com.tr</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Mesaj Formu -->
+    <div class="main-box">
+        <div class="box-title">DOĞRUDAN MESAJ İLETİN</div>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label>ADINIZ SOYADINIZ</label>
+                <input type="text" class="form-control" placeholder="Ad Soyad" required>
+            </div>
+            <div class="form-group">
+                <label>E-POSTA ADRESİNİZ</label>
+                <input type="email" class="form-control" placeholder="ornek@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label>KONU</label>
+                <input type="text" class="form-control" placeholder="Proje / İletişim / İş Birliği" required>
+            </div>
+            <div class="form-group">
+                <label>MESAJINIZ</label>
+                <textarea class="form-control" placeholder="Mesaj metniniz..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">GÖNDER</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-icons">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-x-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-spotify"></i>
+        </div>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+</body>
+</html>
