@@ -9,8 +9,27 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; }
         
-        /* Header & Nav */
-        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+        .top-content { max-width: 450px; margin: 0 auto; width: 100%; }
+
+        /* Üst Header - Bayraklı ve Orijinal Renkli İkonlu Başlık */
+        .portal-header { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .portal-flag { font-size: 14px; }
+        .portal-title { color: #888; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+        
+        .top-social-icons { display: flex; align-items: center; gap: 8px; }
+        .top-social-icons a { font-size: 13px; text-decoration: none; display: flex; align-items: center; }
+        
+        /* Orijinal İkon Renkleri */
+        .color-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .color-yt { color: #ff0000; }
+        .color-fb { color: #1877f2; }
+        .color-tk { color: #fe2c55; }
+        .color-sp { color: #1db954; }
+        
+        /* X (Twitter) Özel SVG */
+        .x-svg-icon { width: 13px; height: 13px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+        .footer-x-svg { width: 16px; height: 16px; fill: #ffffff; display: inline-block; vertical-align: middle; }
+
         nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
         nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
         nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
@@ -31,33 +50,47 @@
         .social-handle { font-size: 12px; color: #777; }
 
         /* Footer */
-        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; }
-        .footer-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; align-items: center; }
-        .footer-icons a { color: #888; font-size: 16px; text-decoration: none; transition: 0.3s; display: flex; align-items: center; }
-        .footer-icons a:hover { color: #d4af37; }
-        .footer-icons svg { width: 16px; height: 16px; fill: #888; transition: 0.3s; }
-        .footer-icons a:hover svg { fill: #d4af37; }
+        footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid #1a1a1a; text-align: center; }
+        .footer-icons { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .footer-icons a { font-size: 18px; text-decoration: none; display: flex; align-items: center; transition: 0.3s; }
+        .footer-icons a:hover { transform: scale(1.2); }
         .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-    <div class="portal-title">RESMÎ SANATÇI PORTALI</div>
+    <div class="top-content">
+        <!-- Üst Header: Sol Bayrak, Sağ Renkli İkonlar -->
+        <div class="portal-header">
+            <span class="portal-flag" title="Türkiye">🇹🇷</span>
+            <span class="portal-title">RESMÎ SANATÇI PORTALI</span>
+            <div class="top-social-icons">
+                <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/kuzeyfekalafat" target="_blank">
+                    <svg class="x-svg-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+                <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
 
-    <nav>
-        <a href="index.html">Anasayfa</a>
-        <a href="hakkinda.html">Hakkımda</a>
-        <a href="albumler1.html">Albümler</a>
-        <a href="iletisim.html">İletişim</a>
-        <a href="sosyal-medya.html" class="active">Sosyal Medya</a>
-    </nav>
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html" class="active">Sosyal Medya</a>
+        </nav>
+    </div>
 
     <h1>RESMÎ HESAPLAR</h1>
     <div class="subtitle">Sosyal Medya Kanalları</div>
 
     <div class="container">
         <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="social-card">
-            <i class="fab fa-instagram social-icon"></i>
+            <i class="fab fa-instagram social-icon" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
             <div class="social-info">
                 <div class="social-name">Instagram</div>
                 <div class="social-handle">@kuzeyfekalafat</div>
@@ -65,7 +98,7 @@
         </a>
 
         <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="social-card">
-            <i class="fab fa-youtube social-icon"></i>
+            <i class="fab fa-youtube social-icon" style="color: #ff0000;"></i>
             <div class="social-info">
                 <div class="social-name">YouTube</div>
                 <div class="social-handle">Kuzeyfe Kalafat Official</div>
@@ -74,8 +107,7 @@
 
         <a href="https://x.com/kuzeyfekalafat" target="_blank" class="social-card">
             <div class="social-icon">
-                <!-- X (Twitter) Özel SVG logosu -->
-                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:#ffffff;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </div>
             <div class="social-info">
                 <div class="social-name">X (Twitter)</div>
@@ -84,7 +116,7 @@
         </a>
 
         <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="social-card">
-            <i class="fab fa-facebook-f social-icon"></i>
+            <i class="fab fa-facebook-f social-icon" style="color: #1877f2;"></i>
             <div class="social-info">
                 <div class="social-name">Facebook</div>
                 <div class="social-handle">Kuzeyfe Kalafat</div>
@@ -92,7 +124,7 @@
         </a>
 
         <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="social-card">
-            <i class="fab fa-tiktok social-icon"></i>
+            <i class="fab fa-tiktok social-icon" style="color: #fe2c55;"></i>
             <div class="social-info">
                 <div class="social-name">TikTok</div>
                 <div class="social-handle">@kuzeyfekalafat</div>
@@ -100,7 +132,7 @@
         </a>
 
         <a href="https://spotify.com" target="_blank" class="social-card">
-            <i class="fab fa-spotify social-icon"></i>
+            <i class="fab fa-spotify social-icon" style="color: #1db954;"></i>
             <div class="social-info">
                 <div class="social-name">Spotify</div>
                 <div class="social-handle">Kuzeyfe Kalafat Artist</div>
@@ -108,16 +140,17 @@
         </a>
     </div>
 
+    <!-- Alt Kısım - Orijinal Renkli İkonlar -->
     <footer>
         <div class="footer-icons">
-            <a href="https://instagram.com/kuzeyfekalafat" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/kuzeyfekalafat" target="_blank" class="color-ig"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/kuzeyfekalafat" target="_blank">
-                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <svg class="footer-x-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://youtube.com/@kuzeyfekalafat" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://facebook.com/kuzeyfekalafat" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://youtube.com/@kuzeyfekalafat" target="_blank" class="color-yt"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com/kuzeyfekalafat" target="_blank" class="color-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@kuzeyfekalafat" target="_blank" class="color-tk"><i class="fab fa-tiktok"></i></a>
+            <a href="https://spotify.com" target="_blank" class="color-sp"><i class="fab fa-spotify"></i></a>
         </div>
         <div class="footer-text">
             © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
