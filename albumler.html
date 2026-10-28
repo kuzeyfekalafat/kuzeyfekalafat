@@ -10,17 +10,17 @@
         body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
         .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
         
-        /* Üst Sanatçı Portalı ve Sosyal Medya Bandı */
-        .portal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; font-size: 12px; font-weight: 600; color: #fff; padding: 0 5px; flex-wrap: wrap; gap: 10px; }
-        .portal-left { display: flex; align-items: center; gap: 6px; letter-spacing: 1px; }
+        /* Üst Sanatçı Portalı ve Sosyal Medya Bandı - Birebir Yan Yana Hizalama */
+        .portal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; font-size: 11px; font-weight: 700; color: #fff; padding: 0 2px; width: 100%; }
+        .portal-left { display: flex; align-items: center; gap: 5px; letter-spacing: 0.5px; white-space: nowrap; }
         
-        .social-icons { display: flex; align-items: center; gap: 12px; }
-        .social-icons a { font-size: 16px; transition: 0.3s; text-decoration: none; display: flex; align-items: center; justify-content: center; }
-        .social-icons a:hover { transform: scale(1.2); }
+        .social-icons { display: flex; align-items: center; gap: 8px; }
+        .social-icons a { font-size: 14px; transition: 0.3s; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+        .social-icons a:hover { transform: scale(1.15); }
 
         /* Orijinal Sosyal Medya Marka Renkleri */
         .social-icons .fa-instagram { color: #e1306c; }
-        .social-icons .fa-x-twitter { color: #ffffff; }
+        .social-icons .x-icon { fill: #ffffff; width: 13px; height: 13px; }
         .social-icons .fa-youtube { color: #ff0000; }
         .social-icons .fa-facebook-f { color: #1877f2; }
         .social-icons .fa-tiktok { color: #00f2fe; }
@@ -66,7 +66,9 @@
             </div>
             <div class="social-icons">
                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" target="_blank">
+                    <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
                 <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
