@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albüm | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
+        .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        
+        /* Üst Sanatçı Portalı / Sosyal Medya Bandı */
+        .portal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; font-size: 11px; font-weight: 700; color: #fff; padding: 0 2px; width: 100%; }
+        .portal-left { display: flex; align-items: center; gap: 5px; letter-spacing: 0.5px; white-space: nowrap; }
+        
+        .social-icons { display: flex; align-items: center; gap: 8px; }
+        .social-icons a { font-size: 14px; transition: 0.3s; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+        .social-icons a:hover { transform: scale(1.15); }
 
+        /* Orijinal Sosyal Medya Marka Renkleri */
+        .social-icons .fa-instagram { color: #e1306c; }
+        .social-icons .x-icon { fill: #ffffff; width: 13px; height: 13px; }
+        .social-icons .fa-youtube { color: #ff0000; }
+        .social-icons .fa-facebook-f { color: #1877f2; }
+        .social-icons .fa-tiktok { color: #00f2fe; }
+        .social-icons .fa-spotify { color: #1db954; }
+
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
+        nav a:hover { border-color: #d4af37; color: #d4af37; }
+        
+        /* Profil Fotoğrafı ve Çerçeve Alanı */
+        .album-header-box { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px 20px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+        .profile-img-container { width: 180px; height: 180px; margin: 0 auto 15px auto; border-radius: 12px; border: 2px solid #d4af37; overflow: hidden; box-shadow: 0 4px 15px rgba(212,175,55,0.3); }
+        .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .album-title { color: #d4af37; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; text-transform: uppercase; font-weight: bold; }
+        .album-info { color: #888; font-size: 12px; letter-spacing: 1px; }
+
+        .accordion-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; text-align: left; }
+        .accordion-item { background: #141414; border: 1px solid #222; border-radius: 12px; overflow: hidden; transition: 0.3s; }
+        .accordion-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .accordion-header span { color: #d4af37; font-weight: bold; font-size: 14px; }
+        .accordion-header .song-name { color: #fff; font-size: 14px; font-weight: 600; text-transform: uppercase; flex-grow: 1; margin-left: 15px; }
+        .accordion-header i { color: #d4af37; font-size: 12px; transition: transform 0.3s; }
+        
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 20px; background: #111; color: #ccc; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+        
+        .credits { margin-top: 15px; padding-top: 12px; border-top: 1px dashed #333; color: #d4af37; font-size: 12px; font-weight: 600; }
+
+        /* Açıldığında */
+        .accordion-item.active .accordion-content { max-height: 3000px; padding: 20px; }
+        .accordion-item.active .accordion-header i { transform: rotate(180deg); }
+        .accordion-item.active { border-color: #d4af37; }
+
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .footer-social { display: flex; justify-content: center; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <!-- Üst Portal ve Orijinal Renkli Sosyal Medya Alanı -->
+        <div class="portal-header">
+            <div class="portal-left">
+                <span>🇹🇷</span> RESMÎ SANATÇI PORTALI
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank">
+                    <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler.html" class="active">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+
+        <!-- Profil Fotoğraflı Albüm Başlık Kutusu -->
+        <div class="album-header-box">
+            <div class="profile-img-container">
+                <img src="profil.jpg" alt="Kuzeyfe Kalafat">
+            </div>
+            <div class="album-title">9. ALBÜM</div>
+            <div class="album-info">Zaman Perdesi Music • Yakında</div>
+        </div>
+
+        <div class="accordion-container">
+            
+            <!-- Örnek Şarkı Alanı (Sözler yazılınca buraya eklenecek) -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>01</span>
+                    <div class="song-name">Çok Yakında</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    Bu albümün şarkı sözleri çok yakında eklenecektir.
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <!-- Alt Sosyal Medya İkonları -->
+        <div class="footer-social social-icons">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank">
+                <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
