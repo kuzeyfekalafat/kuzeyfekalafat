@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albümler | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
+        .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
+        nav a:hover { border-color: #d4af37; color: #d4af37; }
+        
+        .page-header-box { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px 20px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+        .page-title { color: #d4af37; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; text-transform: uppercase; font-weight: bold; }
+        .page-info { color: #888; font-size: 12px; letter-spacing: 1px; }
+
+        .albums-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
+        .album-card { background: #141414; border: 1px solid #222; border-radius: 12px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .album-card:hover { border-color: #d4af37; transform: translateY(-2px); background: #181818; }
+        
+        .album-left { display: flex; align-items: center; gap: 15px; text-align: left; }
+        .album-number { color: #d4af37; font-weight: bold; font-size: 16px; min-width: 25px; }
+        .album-details .name { color: #fff; font-size: 15px; font-weight: 600; text-transform: uppercase; margin-bottom: 3px; }
+        .album-details .desc { color: #888; font-size: 12px; }
+        
+        .album-right i { color: #d4af37; font-size: 14px; transition: transform 0.3s; }
+        .album-card:hover .album-right i { transform: translateX(4px); }
+
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler.html" class="active">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+
+        <div class="page-header-box">
+            <div class="page-title">DİSKOGRAFİ</div>
+            <div class="page-info">Tüm Albümler • Zaman Perdesi Music</div>
+        </div>
+
+        <div class="albums-grid">
+            <a href="albumler1.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">01</span>
+                    <div class="album-details">
+                        <div class="name">Zirve Yolu</div>
+                        <div class="desc">12 Şarkı • Albüm 1</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler2.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">02</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 2</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler3.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">03</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 3</div>
+                        <div class="desc">14 Şarkı • Zaman Perdesi Music</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler4.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">04</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 4</div>
+                        <div class="desc">14 Şarkı • Zaman Perdesi Music</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler5.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">05</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 5</div>
+                        <div class="desc">14 Şarkı • Zaman Perdesi Music</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler6.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">06</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 6</div>
+                        <div class="desc">14 Şarkı • Zaman Perdesi Music</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler7.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">07</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 7</div>
+                        <div class="desc">15 Şarkı • Zaman Perdesi Music</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler8.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">08</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 8</div>
+                        <div class="desc">6 Şarkı • Zaman Perdesi Music</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler9.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">09</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 9</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler10.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">10</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 10</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler11.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">11</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 11</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler12.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">12</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 12</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler13.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">13</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 13</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler14.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">14</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 14</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="albumler15.html" class="album-card">
+                <div class="album-left">
+                    <span class="album-number">15</span>
+                    <div class="album-details">
+                        <div class="name">Albüm 15</div>
+                        <div class="desc">Şarkı Sözleri & Detaylar</div>
+                    </div>
+                </div>
+                <div class="album-right"><i class="fas fa-chevron-right"></i></div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Music 
+        </div>
+    </footer>
+
+</body>
+</html>
