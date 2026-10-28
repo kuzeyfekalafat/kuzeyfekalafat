@@ -1,1 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albüm 8 | Kuzeyfe Kalafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; text-align: center; padding: 20px 15px; display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between; }
+        .top-content { max-width: 500px; margin: 0 auto; width: 100%; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        nav a { color: #ccc; border: 1px solid #333; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        nav a.active { background-color: #d4af37; color: #000; border-color: #d4af37; }
+        nav a:hover { border-color: #d4af37; color: #d4af37; }
+        
+        .album-header-box { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 25px 20px; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+        .album-title { color: #d4af37; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; text-transform: uppercase; font-weight: bold; }
+        .album-info { color: #888; font-size: 12px; letter-spacing: 1px; }
 
+        .accordion-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; text-align: left; }
+        .accordion-item { background: #141414; border: 1px solid #222; border-radius: 12px; overflow: hidden; transition: 0.3s; }
+        .accordion-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .accordion-header span { color: #d4af37; font-weight: bold; font-size: 14px; }
+        .accordion-header .song-name { color: #fff; font-size: 14px; font-weight: 600; text-transform: uppercase; flex-grow: 1; margin-left: 15px; }
+        .accordion-header i { color: #d4af37; font-size: 12px; transition: transform 0.3s; }
+        
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 20px; background: #111; color: #ccc; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+        
+        .credits { margin-top: 15px; padding-top: 12px; border-top: 1px dashed #333; color: #d4af37; font-size: 12px; font-weight: 600; }
+
+        /* Açıldığında */
+        .accordion-item.active .accordion-content { max-height: 3000px; padding: 20px; }
+        .accordion-item.active .accordion-header i { transform: rotate(180deg); }
+        .accordion-item.active { border-color: #d4af37; }
+
+        footer { padding: 20px 0; border-top: 1px solid #1a1a1a; margin-top: 20px; }
+        .footer-text { color: #555; font-size: 11px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="top-content">
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="albumler1.html" class="active">Albümler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="sosyal-medya.html">Sosyal Medya</a>
+        </nav>
+
+        <div class="album-header-box">
+            <div class="album-title">8. ALBÜM</div>
+            <div class="album-info">Zaman Perdesi Music • 6 Şarkı</div>
+        </div>
+
+        <div class="accordion-container">
+            
+            <!-- Şarkı 1 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>01</span>
+                    <div class="song-name">Zaman Perdesi</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Şehrin gürültüsü sustu bir anda
+Adımların yankılanır solumda
+Zaman perdesi çekildi üstümüze
+Bırakak her şeyi, dalalım denize
+
+El ele uzanıyor sahil boyunca yol
+Rüzgar saçlarında, ellerim sende bol
+Bir an olsun gitmesin gözlerinin izi
+Bu gece sadece ikimiz varız, ikimiz gizli
+
+Zaman dursun, dalgalar vururken kıyıya
+Bırakma ellerimi, inanmam rüyaya
+Bir ömür yetmez ki bu aşkı anlatmaya
+Zaman perdesi kapansın sabaha!
+
+Yıldızlar şahit bu geceki yeminimize
+Kimse dokunamaz artık kalbimize
+
+Sen benim en güzel, en saklı limanımsın
+Bitmeyen şarkımsın, ruhumun aynasısın
+
+Zaman dursun, dalgalar vururken kıyıya
+Bırakma ellerimi, inanmam rüyaya
+Bir ömür yetmez ki bu aşkı anlatmaya
+Zaman perdesi kapansın sabaha!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>02</span>
+                    <div class="song-name">Neon Işıklar</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Gözlerimde flaşlar, sokaklar ıslak
+Yine gece yarısı, içimdeki tuzak
+Neon ışıklar altında kaybolmuşuz hepimiz
+Bu şehrin ritmiyle atıyor kalbimiz
+
+Zaman akıp gidiyor durduramaz kimse
+Bass vuruyor derinden, herkes deli köse
+Hadi bırak kendini, akışa bırak rüzgarı
+Bu gece bizim gecemiz, unut kuralı!
+
+Neon ışıklar! Yanar söner içimde
+Kaybolduk bu gece, kimin umrundainde?
+Dönüyor dünya, hızlanıyor ritim
+Seninle bu gece, en deli tarifim!
+Neon ışıklar!
+
+Gölge düşer duvara, ritim hiç durmaz
+Bu kalabalıkta kimse kimseyi sormaz
+Renkler birbirine karışmış, pembe ve mavi
+Sanki rüya gibiyiz, bilmem ki tabi!
+
+Zaman akıp gidiyor durduramaz kimse
+Bass vuruyor derinden, herkes deli köse
+Hadi bırak kendini, akışa bırak rüzgarı
+Bu gece bizim gecemiz, unut kuralı!
+
+Neon ışıklar! Yanar söner içimde
+Kaybolduk bu gece, kimin umrundainde?
+Dönüyor dünya, hızlanıyor ritim
+Seninle bu gece, en deli tarifim!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>03</span>
+                    <div class="song-name">Gözyaşı Fabrikası</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Duvarlar üstüme gelir her gece yarısı
+Sessizliğin içinde kaybolur yankısı
+Bir fabrika kurulmuş içimde derinden
+Üretir durur hüzünleri sil baştan yeniden
+
+Her damla bir anı, her damla bir hasret
+Giden gitti ama içimde kopuyor kıyamet
+Gözyaşı fabrikası çalışır gece gündüz
+Bu aşkın sonu hep bir koca gökyüzü sessiz
+
+Akmayan yaşlar kalpte birikir dağ gibi
+Sensiz bu şehir bana yıkılmış bir bağ gibi
+Gözyaşı fabrikasında vardiyam bitmez bil mi?
+Dönüp de bir kez olsun halimi sordun mu ki?
+
+Eski fotoğraflar sararmış masanın üstünde
+Bir damla düşer, silinir gözümün önünde
+Adını fısıldarım boş odanın duvarına
+Çare bulamadım bu kalbin yarasına
+
+Her damla bir anı, her damla bir hasret
+Giden gitti ama içimde kopuyor kıyamet
+Gözyaşı fabrikası çalışır gece gündüz
+Bu aşkın sonu hep bir koca gökyüzü sessiz
+
+Akmayan yaşlar kalpte birikir dağ gibi
+Sensiz bu şehir bana yıkılmış bir bağ gibi
+Gözyaşı fabrikasında vardiyam bitmez bil mi?
+Dönüp de bir kez olsun halimi sordun mu ki?
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>04</span>
+                    <div class="song-name">Yalan Rüzgarı</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Gözlerimin içine bakıp da söyledin
+Her kelimen yalandı, sen bunu istedin
+Bir rüzgar gibi estin, darmadağın ettin
+Değdi mi bari, ellerine ne geçti?
+
+Kendini kandırma, suçlu hep ben miyim?
+Senin o oyunlarına ne kadar dayandım biliyim
+Yalan rüzgarı esti, savurdu külleri
+Kapandı artık bizim için o mutlu günleri
+
+Her sözün bir tuzak, her adımların hile
+Nasıl inanmışım ben bu tatlı dile?
+
+Yalan rüzgarı esiyor başımızda!
+Gözyaşı var hala bu aşkın sonunda
+Ne sen masumsun ne de ben sütten ak kaşık
+Biz bu yalan rüzgarında çoktan batmışık!
+
+Maskeler düştü işte, herkes gerçek yüzüyle
+Güvendim sana ben en saf hissimle
+
+Artık çok geç, geriye dönüşü yok bu yolun
+Yalnız kaldın işte, bitti o gururun
+
+Her sözün bir tuzak, her adımların hile
+Nasıl inanmışım ben bu tatlı dile?
+
+Yalan rüzgarı esiyor başımızda!
+Gözyaşı var hala bu aşkın sonunda
+Ne sen masumsun ne de ben sütten ak kaşık
+Biz bu yalan rüzgarında çoktan batmışık!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 5 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>05</span>
+                    <div class="song-name">Kilitli Kapılar</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Etrafım surlarla çevrili, kilitli bir liman
+Burada zaman durmuş, akmıyor zaman
+Anahtar çok uzakta, denizin dibinde
+Ben bu yalnız adada, kayboldum yine
+
+Ama durmak yok, dönüyor dünya fırtınayla
+Kaçmak istiyorum bu sessiz kancadan hızla
+Adımlarım hızlanıyor, duvarlar yıkılacak
+Bu liman bu gece yerinden oynayacak!
+
+Kilitli kapılar açılır elbet bir gün!
+Dalgalar döver kıyıyı, bitiyor bu sürgün
+Hareket et, durma şimdi, ritme ayak uydur
+Bu kilitli limanda tek kral sensin, duydur!
+Kilitli kapılar!
+
+Paslanmış demirler, sis çökmüş üstüme
+Kimse duymuyor sesimi, ne söylesem nafile
+Ama içimde bir ateş, sönmüyor ne çare
+Bu limanı yakıp geçeceğim parça parça yine!
+
+Ama durmak yok, dönüyor dünya fırtınayla
+Kaçmak istiyorum bu sessiz kancadan hızla
+Adımlarım hızlanıyor, duvarlar yıkılacak
+Bu liman bu gece yerinden oynayacak!
+
+Kilitli kapılar açılır elbet bir gün!
+Dalgalar döver kıyıyı, bitiyor bu sürgün
+Hareket et, durma şimdi, ritme ayak uydur
+Bu kilitli limanda tek kral sensin, duydur!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+            <!-- Şarkı 6 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>06</span>
+                    <div class="song-name">Hız Hız Cız Cız</div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+Yine başladı mesai,
+Boş sesler korosu...
+
+Kurulmuş masalar arkamdan yine,
+Haberim yok sanıp gülerler kendi kendine.
+Yüze gülüp rol kesmek en büyük hobi,
+Arkadan iş çevirmek bunların mesleği tabi!
+Fısıltı gazetesi çalışır tam gaz,
+Bunlara laf anlatmak maalesef biraz ayaz.
+
+Laflar havada uçuşur, cız cız cız cız!
+Arkadan işler döner, hız hız hız hız!
+Sıkıldı kulaklarım, yet artık yeter,
+Çenenizi kapatın, bu gürültü biter!
+Laflar havada uçuşur, cız cız cız cız,
+Arkadan işler döner, hız hız hız hız!
+
+Yaptığınız her hareket tam bir fiyasko,
+Sahne sizin, buyurun oynayın tiyatro!
+Yürek yok ki gözünün içine bakmaya,
+Uzaktan atıp tutmak en kolay rota.
+Gizli kapaklı dolaplar, bomboş yalanlar,
+Sizinle harcanan her saniye ziyanlar!
+
+Laflar havada uçuşur, cız cız cız cız!
+Arkadan işler döner, hız hız hız hız!
+Sıkıldı kulaklarım, yet artık yeter,
+Çenenizi kapatın, bu gürültü biter!
+Laflar havada uçuşur, cız cız cız cız,
+Arkadan işler döner, hız hız hız hız!
+
+Cız cız cız cız...
+Hız hız hız hız...
+Hadi başka kapıya kanka!
+
+                    <div class="credits">Söz ve Müzik : Kuzeyfe Kalafat</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            © 2026 KUZEYFE KALAFAT. Tüm Hakları Saklıdır.<br>
+            Zaman Perdesi Yapım Prodüksiyon
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Hepsini kapat
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Tıklanan kapalıysa aç
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
